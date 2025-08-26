@@ -106,7 +106,7 @@ GarapaSystem-MVP é um sistema CRM moderno e completo construído com as melhore
 
 ### 1. **Clone o repositório**
 ```bash
-git clone https://github.com/garapadev/GarapaSystem-MVP.git
+git clone https://github.com/garapadev/crm-mvp.git
 cd GarapaSystem-MVP
 ```
 

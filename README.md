@@ -316,7 +316,7 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 🆘 Suporte
 
-- 📧 **Email**: suporte@crmmvp.com
+- 📧 **Fase**: MVP alpha
 - 📚 **Documentação**: Consulte este README para informações completas
 - 🐛 **Issues**: Reporte problemas através dos canais de suporte
 

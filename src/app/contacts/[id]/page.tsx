@@ -45,18 +45,25 @@ interface Activity {
 
 interface ContactDetail {
   id: string
-  name: string
-  email: string
-  phone?: string
-  company?: string
-  position?: string
-  address?: string
-  city?: string
-  state?: string
-  zipCode?: string
+  firstName: string
+  lastName: string
+  email?: string | null
+  phone?: string | null
+  company?: string | null
+  position?: string | null
+  address?: string | null
+  city?: string | null
+  state?: string | null
+  zipCode?: string | null
+  country?: string | null
+  website?: string | null
+  notes?: string | null
   tags: string[]
-  status: 'active' | 'inactive' | 'prospect' | 'client'
-  notes?: string
+  status: 'ACTIVE' | 'INACTIVE' | 'PROSPECT' | 'CUSTOMER' | 'LEAD'
+  source?: string | null
+  latitude?: number | null
+  longitude?: number | null
+  customFields?: Record<string, any> | null
   createdAt: Date
   updatedAt: Date
   activities: Activity[]
@@ -98,14 +105,16 @@ const getActivityColor = (type: Activity['type']) => {
 
 const getStatusColor = (status: ContactDetail['status']) => {
   switch (status) {
-    case 'active':
+    case 'ACTIVE':
       return 'bg-green-100 text-green-800'
-    case 'inactive':
+    case 'INACTIVE':
       return 'bg-gray-100 text-gray-800'
-    case 'prospect':
+    case 'PROSPECT':
       return 'bg-blue-100 text-blue-800'
-    case 'client':
+    case 'CUSTOMER':
       return 'bg-purple-100 text-purple-800'
+    case 'LEAD':
+      return 'bg-orange-100 text-orange-800'
     default:
       return 'bg-gray-100 text-gray-800'
   }
@@ -114,11 +123,9 @@ const getStatusColor = (status: ContactDetail['status']) => {
 export default function ContactDetailPage() {
   const params = useParams()
   const router = useRouter()
-  const { contacts, updateContact, loading } = useContactStore()
+  const { contacts, updateContact } = useContactStore()
   const [contact, setContact] = useState<ContactDetail | null>(null)
-  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false)
   const [isActivityDialogOpen, setIsActivityDialogOpen] = useState(false)
-  const [editForm, setEditForm] = useState<Partial<ContactDetail>>({})
   const [newActivity, setNewActivity] = useState<Partial<Activity>>({
     type: 'note',
     title: '',
@@ -129,86 +136,18 @@ export default function ContactDetailPage() {
     if (params.id && contacts.length > 0) {
       const foundContact = contacts.find(c => c.id === params.id)
       if (foundContact) {
-        // Simular dados de atividades para demonstração
+        // Buscar dados completos do contato via API (incluindo atividades)
         const contactWithActivities: ContactDetail = {
           ...foundContact,
-          activities: [
-            {
-              id: '1',
-              type: 'call',
-              title: 'Ligação de follow-up',
-              description: 'Discussão sobre proposta comercial',
-              date: new Date(2024, 0, 15, 14, 30),
-              user: 'João Silva',
-              status: 'completed'
-            },
-            {
-              id: '2',
-              type: 'email',
-              title: 'Envio de proposta',
-              description: 'Proposta comercial enviada por email',
-              date: new Date(2024, 0, 12, 9, 15),
-              user: 'Maria Santos',
-              status: 'completed'
-            },
-            {
-              id: '3',
-              type: 'meeting',
-              title: 'Reunião de apresentação',
-              description: 'Apresentação dos serviços da empresa',
-              date: new Date(2024, 0, 10, 16, 0),
-              user: 'Carlos Oliveira',
-              status: 'completed'
-            },
-            {
-              id: '4',
-              type: 'task',
-              title: 'Preparar contrato',
-              description: 'Elaborar minuta do contrato de prestação de serviços',
-              date: new Date(2024, 0, 20, 10, 0),
-              user: 'Ana Costa',
-              status: 'pending'
-            }
-          ]
+          activities: [] // TODO: Implementar endpoint para buscar atividades reais
         }
         setContact(contactWithActivities)
-        setEditForm(contactWithActivities)
       } else {
         toast.error('Contato não encontrado')
         router.push('/contacts')
       }
     }
   }, [params.id, contacts, router])
-
-  const handleEditSubmit = async () => {
-    if (!contact || !editForm.name || !editForm.email) {
-      toast.error('Nome e email são obrigatórios')
-      return
-    }
-
-    try {
-      await updateContact(contact.id, {
-        name: editForm.name,
-        email: editForm.email,
-        phone: editForm.phone,
-        company: editForm.company,
-        position: editForm.position,
-        address: editForm.address,
-        city: editForm.city,
-        state: editForm.state,
-        zipCode: editForm.zipCode,
-        tags: editForm.tags || [],
-        status: editForm.status || 'active',
-        notes: editForm.notes
-      })
-      
-      setContact({ ...contact, ...editForm })
-      setIsEditDialogOpen(false)
-      toast.success('Contato atualizado com sucesso!')
-    } catch (error) {
-      toast.error('Erro ao atualizar contato')
-    }
-  }
 
   const handleAddActivity = () => {
     if (!newActivity.title) {
@@ -238,7 +177,7 @@ export default function ContactDetailPage() {
     toast.success('Atividade adicionada com sucesso!')
   }
 
-  if (loading || !contact) {
+  if (!contact) {
     return (
       <div className="flex items-center justify-center min-h-screen">
         <div className="text-center">
@@ -263,10 +202,10 @@ export default function ContactDetailPage() {
           Voltar
         </Button>
         <div className="flex-1">
-          <h1 className="text-2xl font-bold text-gray-900">{contact.name}</h1>
+          <h1 className="text-2xl font-bold text-gray-900">{contact.firstName} {contact.lastName}</h1>
           <p className="text-gray-600">{contact.company}</p>
         </div>
-        <Button onClick={() => setIsEditDialogOpen(true)} className="flex items-center gap-2">
+        <Button onClick={() => router.push(`/contacts/${contact.id}/edit`)} className="flex items-center gap-2">
           <Edit className="h-4 w-4" />
           Editar
         </Button>
@@ -279,18 +218,20 @@ export default function ContactDetailPage() {
             <CardHeader>
               <div className="flex items-center gap-4">
                 <Avatar className="h-16 w-16">
-                  <AvatarImage src={`https://api.dicebear.com/7.x/initials/svg?seed=${contact.name}`} />
+                  <AvatarImage src={`https://api.dicebear.com/7.x/initials/svg?seed=${contact.firstName} ${contact.lastName}`} />
                   <AvatarFallback>
-                    {contact.name.split(' ').map(n => n[0]).join('').toUpperCase()}
+                    {`${contact.firstName} ${contact.lastName}`.split(' ').map(n => n[0]).join('').toUpperCase()}
                   </AvatarFallback>
                 </Avatar>
                 <div className="flex-1">
-                  <CardTitle className="text-lg">{contact.name}</CardTitle>
+                  <CardTitle className="text-lg">{contact.firstName} {contact.lastName}</CardTitle>
                   <CardDescription>{contact.position}</CardDescription>
                   <Badge className={getStatusColor(contact.status)} variant="secondary">
-                    {contact.status === 'active' ? 'Ativo' :
-                     contact.status === 'inactive' ? 'Inativo' :
-                     contact.status === 'prospect' ? 'Prospect' : 'Cliente'}
+                    {contact.status === 'ACTIVE' ? 'Ativo' :
+                     contact.status === 'INACTIVE' ? 'Inativo' :
+                     contact.status === 'PROSPECT' ? 'Prospect' :
+                     contact.status === 'CUSTOMER' ? 'Cliente' :
+                     contact.status === 'LEAD' ? 'Lead' : 'Desconhecido'}
                   </Badge>
                 </div>
               </div>
@@ -482,140 +423,6 @@ export default function ContactDetailPage() {
           </Tabs>
         </div>
       </div>
-
-      {/* Dialog de Edição */}
-      <Dialog open={isEditDialogOpen} onOpenChange={setIsEditDialogOpen}>
-        <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
-          <DialogHeader>
-            <DialogTitle>Editar Contato</DialogTitle>
-            <DialogDescription>
-              Atualize as informações do contato.
-            </DialogDescription>
-          </DialogHeader>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <Label htmlFor="edit-name">Nome *</Label>
-              <Input
-                id="edit-name"
-                value={editForm.name || ''}
-                onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
-                placeholder="Nome completo"
-              />
-            </div>
-            <div>
-              <Label htmlFor="edit-email">Email *</Label>
-              <Input
-                id="edit-email"
-                type="email"
-                value={editForm.email || ''}
-                onChange={(e) => setEditForm({ ...editForm, email: e.target.value })}
-                placeholder="email@exemplo.com"
-              />
-            </div>
-            <div>
-              <Label htmlFor="edit-phone">Telefone</Label>
-              <Input
-                id="edit-phone"
-                value={editForm.phone || ''}
-                onChange={(e) => setEditForm({ ...editForm, phone: e.target.value })}
-                placeholder="(11) 99999-9999"
-              />
-            </div>
-            <div>
-              <Label htmlFor="edit-company">Empresa</Label>
-              <Input
-                id="edit-company"
-                value={editForm.company || ''}
-                onChange={(e) => setEditForm({ ...editForm, company: e.target.value })}
-                placeholder="Nome da empresa"
-              />
-            </div>
-            <div>
-              <Label htmlFor="edit-position">Cargo</Label>
-              <Input
-                id="edit-position"
-                value={editForm.position || ''}
-                onChange={(e) => setEditForm({ ...editForm, position: e.target.value })}
-                placeholder="Cargo/Função"
-              />
-            </div>
-            <div>
-              <Label htmlFor="edit-status">Status</Label>
-              <Select
-                value={editForm.status}
-                onValueChange={(value) => setEditForm({ ...editForm, status: value as ContactDetail['status'] })}
-              >
-                <SelectTrigger>
-                  <SelectValue />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="active">Ativo</SelectItem>
-                  <SelectItem value="inactive">Inativo</SelectItem>
-                  <SelectItem value="prospect">Prospect</SelectItem>
-                  <SelectItem value="client">Cliente</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-            <div className="md:col-span-2">
-              <Label htmlFor="edit-address">Endereço</Label>
-              <Input
-                id="edit-address"
-                value={editForm.address || ''}
-                onChange={(e) => setEditForm({ ...editForm, address: e.target.value })}
-                placeholder="Endereço completo"
-              />
-            </div>
-            <div>
-              <Label htmlFor="edit-city">Cidade</Label>
-              <Input
-                id="edit-city"
-                value={editForm.city || ''}
-                onChange={(e) => setEditForm({ ...editForm, city: e.target.value })}
-                placeholder="Cidade"
-              />
-            </div>
-            <div>
-              <Label htmlFor="edit-state">Estado</Label>
-              <Input
-                id="edit-state"
-                value={editForm.state || ''}
-                onChange={(e) => setEditForm({ ...editForm, state: e.target.value })}
-                placeholder="Estado"
-              />
-            </div>
-            <div className="md:col-span-2">
-              <Label htmlFor="edit-tags">Tags (separadas por vírgula)</Label>
-              <Input
-                id="edit-tags"
-                value={editForm.tags?.join(', ') || ''}
-                onChange={(e) => setEditForm({ 
-                  ...editForm, 
-                  tags: e.target.value.split(',').map(tag => tag.trim()).filter(Boolean)
-                })}
-                placeholder="tag1, tag2, tag3"
-              />
-            </div>
-            <div className="md:col-span-2">
-              <Label htmlFor="edit-notes">Observações</Label>
-              <Textarea
-                id="edit-notes"
-                value={editForm.notes || ''}
-                onChange={(e) => setEditForm({ ...editForm, notes: e.target.value })}
-                placeholder="Observações sobre o contato"
-                rows={3}
-              />
-            </div>
-          </div>
-          <div className="flex justify-end gap-2 mt-6">
-            <Button variant="outline" onClick={() => setIsEditDialogOpen(false)}>
-              Cancelar
-            </Button>
-            <Button onClick={handleEditSubmit} disabled={loading}>
-              {loading ? 'Salvando...' : 'Salvar'}
-            </Button>
-          </div>
-        </DialogContent>
-      </Dialog>
     </div>
   )
 }

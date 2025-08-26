@@ -1,4 +1,4 @@
-# 🚀 CRM MVP - Sistema de Gestão de Relacionamento com Cliente
+# 🚀 GarapaSystem-MVP - Sistema de Gestão de Relacionamento com Cliente
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
 ![React](https://img.shields.io/badge/React-19-blue?logo=react)
@@ -7,7 +7,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)
 ![Prisma](https://img.shields.io/badge/Prisma-ORM-blue?logo=prisma)
 
-Sistema CRM moderno e completo construído com as melhores tecnologias do mercado. Oferece gestão completa de relacionamento com cliente, sistema de permissões granular, módulo de tarefas avançado e cliente webmail integrado.
+GarapaSystem-MVP é um sistema CRM moderno e completo construído com as melhores tecnologias do mercado. Oferece gestão completa de relacionamento com cliente, sistema de permissões granular, módulo de tarefas avançado e cliente webmail integrado.
 
 ## ✨ Funcionalidades Principais
 
@@ -105,8 +105,8 @@ Sistema CRM moderno e completo construído com as melhores tecnologias do mercad
 
 ### 1. **Clone o repositório**
 ```bash
-git clone https://github.com/garapadev/crm-mvp.git
-cd crm-mvp
+git clone https://github.com/garapadev/GarapaSystem-MVP.git
+cd GarapaSystem-MVP
 ```
 
 ### 2. **Instale as dependências**
@@ -166,7 +166,7 @@ npm run pm2:stop
 ## 🎮 Acesso ao Sistema
 
 - **URL**: http://localhost:3000
-- **Usuário**: admin@crmmvp.com
+- **Usuário**: admin@garapasystem.com
 - **Senha**: admin123
 
 ## 📊 Arquitetura do Sistema
@@ -241,10 +241,10 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## 🆘 Suporte
 
-- 📧 **Email**: suporte@crmmvp.com
-- 📚 **Documentação**: [Wiki do Projeto](https://github.com/garapadev/crm-mvp/wiki)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/garapadev/crm-mvp/issues)
-- 💬 **Discord**: [Comunidade CRM MVP](https://discord.gg/crmmvp)
+- 📧 **Email**: suporte@garapasystem.com
+- 📚 **Documentação**: [Wiki do Projeto](https://github.com/garapadev/GarapaSystem-MVP/wiki)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/garapadev/GarapaSystem-MVP/issues)
+- 💬 **Discord**: [Comunidade GarapaSystem](https://discord.gg/garapasystem)
 
 ---
 

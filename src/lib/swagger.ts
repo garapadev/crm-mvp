@@ -4,9 +4,9 @@ const options = {
   definition: {
     openapi: '3.0.3',
     info: {
-      title: 'CRM MVP API',
+      title: 'GarapaSystem-MVP API',
       version: '1.0.0',
-      description: 'API completa para sistema CRM/ERP com gestão de colaboradores, tarefas, webmail e muito mais',
+      description: 'API completa para GarapaSystem-MVP com gestão de colaboradores, tarefas, webmail e muito mais',
       contact: {
         name: 'CRM API Support',
         email: 'api-support@company.com',

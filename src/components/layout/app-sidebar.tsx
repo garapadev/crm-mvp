@@ -8,6 +8,11 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible"
 import { 
   Home, 
   CheckSquare, 
@@ -18,7 +23,9 @@ import {
   X,
   FileText,
   Webhook,
-  UserCheck
+  UserCheck,
+  Users,
+  ChevronRight
 } from "lucide-react"
 
 const navigation = [
@@ -26,6 +33,11 @@ const navigation = [
     name: "Dashboard",
     href: "/dashboard",
     icon: Home,
+  },
+  {
+    name: "Contatos",
+    href: "/contacts",
+    icon: Users,
   },
   {
     name: "Clientes",

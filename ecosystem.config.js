@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'crm-web',
+      name: 'garapa-web',
       script: 'node_modules/next/dist/bin/next',
       args: 'dev',
       cwd: 'c:/projetos/mvp28',
@@ -15,9 +15,9 @@ module.exports = {
       instances: 1,
       exec_mode: 'fork',
       max_memory_restart: '1G',
-      error_file: './logs/crm-web-error.log',
-      out_file: './logs/crm-web-out.log',
-      log_file: './logs/crm-web.log',
+      error_file: './logs/garapa-web-error.log',
+      out_file: './logs/garapa-web-out.log',
+      log_file: './logs/garapa-web.log',
       time: true,
       autorestart: true,
       watch: true,
@@ -27,7 +27,7 @@ module.exports = {
       kill_timeout: 5000,
     },
     {
-      name: 'crm-webhook-worker',
+      name: 'garapa-webhook-worker',
       script: './src/workers/webhook-worker.js',
       cwd: 'c:/projetos/mvp28',
       env: {
@@ -48,7 +48,7 @@ module.exports = {
       kill_timeout: 5000,
     },
     {
-      name: 'crm-email-sync',
+      name: 'garapa-email-sync',
       script: './src/workers/email-sync-worker.js',
       cwd: 'c:/projetos/mvp28',
       env: {
@@ -76,8 +76,8 @@ module.exports = {
       user: 'app',
       host: ['your-server.com'],
       ref: 'origin/main',
-      repo: 'git@github.com:your-repo/crm-mvp.git',
-      path: '/home/app/crm-mvp',
+      repo: 'git@github.com:garapadev/GarapaSystem-MVP.git',
+      path: '/home/app/GarapaSystem-MVP',
       'post-deploy': 'npm install && npm run build && pm2 reload ecosystem.config.js --env production',
       env: {
         NODE_ENV: 'production'

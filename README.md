@@ -1,4 +1,4 @@
-# 🚀 CRM MVP - Sistema de Gestão de Relacionamento com Cliente
+# 🚀 GarapaSystem-MVP - Sistema de Gestão de Relacionamento com Cliente
 
 ![Next.js](https://img.shields.io/badge/Next.js-14-black?logo=next.js)
 ![React](https://img.shields.io/badge/React-19-blue?logo=react)
@@ -7,7 +7,7 @@
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-blue?logo=postgresql)
 ![Prisma](https://img.shields.io/badge/Prisma-ORM-blue?logo=prisma)
 
-Sistema CRM moderno e completo construído com as melhores tecnologias do mercado. Oferece gestão completa de relacionamento com cliente, sistema de permissões granular, módulo de tarefas avançado e cliente webmail integrado.
+GarapaSystem-MVP é um sistema CRM moderno e completo construído com as melhores tecnologias do mercado. Oferece gestão completa de relacionamento com cliente, sistema de permissões granular, módulo de tarefas avançado e cliente webmail integrado.
 
 ## ✨ Funcionalidades Principais
 
@@ -99,35 +99,42 @@ Sistema CRM moderno e completo construído com as melhores tecnologias do mercad
 - Node.js 18+ 
 - npm ou yarn
 - Docker e Docker Compose
-- PostgreSQL 15 (ou via Docker)
+- PostgreSQL 15 (via Docker)
+- Redis (via Docker)
 
 ## 🚀 Instalação e Configuração
 
 ### 1. **Clone o repositório**
 ```bash
-git clone https://github.com/garapadev/crm-mvp.git
-cd crm-mvp
+git clone https://github.com/garapadev/GarapaSystem-MVP.git
+cd GarapaSystem-MVP
 ```
 
 ### 2. **Instale as dependências**
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
-### 3. **Configure o banco de dados**
+### 3. **Configure as variáveis de ambiente**
+Copie `.env.example` para `.env` e configure as variáveis necessárias.
+
+### 4. **Configure o banco de dados**
 ```bash
-# Inicie o PostgreSQL via Docker
+# Inicie PostgreSQL e Redis via Docker
 docker-compose up -d
 
-# Execute as migrações
+# Execute as migrações do Prisma
 npx prisma migrate deploy
 
-# Populate com dados iniciais
-npx prisma db seed
+# Gere o cliente Prisma
+npx prisma generate
+
+# Popule o banco com dados iniciais
+npx tsx prisma/seed.ts
 ```
 
-### 4. **Configure as variáveis de ambiente**
-Copie `.env.example` para `.env.local` e configure:
+### 5. **Variáveis de ambiente**
+As principais variáveis de ambiente no arquivo `.env`:
 
 ```env
 # Database
@@ -137,6 +144,9 @@ DATABASE_URL="postgresql://crm_user:crm_password@localhost:5432/crm_mvp"
 NEXTAUTH_SECRET="seu-secret-super-seguro"
 NEXTAUTH_URL="http://localhost:3000"
 
+# Redis (para cache e sessões)
+REDIS_URL="redis://localhost:6379"
+
 # Email (opcional)
 SMTP_HOST="smtp.gmail.com"
 SMTP_PORT="587"
@@ -144,7 +154,7 @@ SMTP_USER="seu-email@gmail.com"
 SMTP_PASS="sua-senha-app"
 ```
 
-### 5. **Inicie o sistema**
+### 6. **Inicie o sistema**
 
 #### Desenvolvimento
 ```bash
@@ -163,11 +173,74 @@ npm run pm2:monitor
 npm run pm2:stop
 ```
 
+## 🛠️ Comandos Úteis
+
+```bash
+# Conectar ao banco PostgreSQL
+docker exec -it garapa-postgres psql -U crm_user -d crm_mvp
+
+# Ver estrutura de uma tabela
+\d users
+
+# Consultar usuários
+SELECT id, name, email FROM users;
+
+# Reset completo do banco
+npx prisma migrate reset
+
+# Visualizar banco no Prisma Studio
+npx prisma studio
+
+# Verificar logs do servidor
+npm run dev
+```
+
 ## 🎮 Acesso ao Sistema
 
 - **URL**: http://localhost:3000
 - **Usuário**: admin@crmmvp.com
 - **Senha**: admin123
+
+## 🐳 Serviços Docker
+
+O projeto utiliza Docker Compose para gerenciar os seguintes serviços:
+
+- **PostgreSQL 15**: Banco de dados principal na porta 5432
+- **Redis**: Cache e sessões na porta 6379
+
+```bash
+# Verificar status dos containers
+docker-compose ps
+
+# Ver logs dos serviços
+docker-compose logs
+
+# Parar os serviços
+docker-compose down
+```
+
+## 🔧 Troubleshooting
+
+### Problema: "Module not found: @/generated/prisma"
+```bash
+# Solução: Regenerar o cliente Prisma
+npx prisma generate
+```
+
+### Problema: Banco de dados vazio
+```bash
+# Solução: Executar o seed novamente
+npx tsx prisma/seed.ts
+```
+
+### Problema: Erro de conexão com PostgreSQL
+```bash
+# Verificar se o container está rodando
+docker-compose ps
+
+# Reiniciar os serviços
+docker-compose restart
+```
 
 ## 📊 Arquitetura do Sistema
 
@@ -190,29 +263,32 @@ npm run pm2:stop
 src/
 ├── app/                          # App Router do Next.js
 │   ├── api/                      # API Routes
-│   │   ├── auth/                 # Autenticação
-│   │   ├── employees/            # Colaboradores
-│   │   ├── tasks/                # Tarefas
-│   │   ├── webhooks/             # Webhooks
-│   │   └── ...
+│   │   ├── auth/                 # Autenticação NextAuth
+│   │   ├── employees/            # CRUD de colaboradores
+│   │   ├── tasks/                # Sistema de tarefas
+│   │   ├── groups/               # Gestão de grupos
+│   │   └── permissions/          # Sistema RBAC
 │   ├── dashboard/                # Dashboard principal
-│   ├── employees/                # Gestão de colaboradores
-│   ├── tasks/                    # Sistema de tarefas
-│   ├── webmail/                  # Cliente de email
-│   └── administration/           # Área administrativa
+│   ├── employees/                # Interface de colaboradores
+│   ├── tasks/                    # Interface de tarefas
+│   ├── groups/                   # Interface de grupos
+│   └── auth/                     # Páginas de autenticação
 ├── components/                   # Componentes React
-│   ├── ui/                       # Componentes base (shadcn/ui)
-│   ├── layout/                   # Layout da aplicação
-│   ├── tasks/                    # Componentes de tarefas
-│   └── webmail/                  # Componentes de email
+│   ├── ui/                       # Componentes shadcn/ui
+│   ├── layout/                   # Layout e navegação
+│   ├── forms/                    # Formulários reutilizáveis
+│   └── tables/                   # Tabelas de dados
 ├── lib/                          # Bibliotecas e utilities
 │   ├── auth.ts                   # Configuração NextAuth
 │   ├── prisma.ts                 # Cliente Prisma
 │   ├── permissions.ts            # Sistema RBAC
-│   └── email-service.ts          # Serviço de email
-├── workers/                      # Workers de background
-│   ├── email-sync-worker.js      # Sincronização de emails
-│   └── webhook-worker.js         # Processamento de webhooks
+│   └── utils.ts                  # Utilitários gerais
+├── generated/                    # Arquivos gerados
+│   └── prisma/                   # Cliente Prisma gerado
+├── prisma/                       # Schema e migrações
+│   ├── schema.prisma             # Schema do banco
+│   ├── seed.ts                   # Dados iniciais
+│   └── migrations/               # Migrações do banco
 └── middleware.ts                 # Middleware de autenticação
 ```
 
@@ -223,7 +299,6 @@ src/
 - [ ] **Integração WhatsApp** - Chat integrado ao CRM
 - [ ] **Relatórios Avançados** - Exportação em PDF e Excel
 - [ ] **Mobile App** - Aplicativo React Native
-- [ ] **API GraphQL** - Alternativa à API REST
 - [ ] **Notificações Push** - Notificações em tempo real
 - [ ] **Backup Automático** - Backup incremental do banco
 
@@ -242,12 +317,11 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 ## 🆘 Suporte
 
 - 📧 **Email**: suporte@crmmvp.com
-- 📚 **Documentação**: [Wiki do Projeto](https://github.com/garapadev/crm-mvp/wiki)
-- 🐛 **Issues**: [GitHub Issues](https://github.com/garapadev/crm-mvp/issues)
-- 💬 **Discord**: [Comunidade CRM MVP](https://discord.gg/crmmvp)
+- 📚 **Documentação**: Consulte este README para informações completas
+- 🐛 **Issues**: Reporte problemas através dos canais de suporte
 
 ---
 
 <div align="center">
-  <strong>Desenvolvido com ❤️ usando as melhores tecnologias</strong>
+  <strong>Desenvolvido com ❤️ usando as melhores tecnologias do ceara para o mundo!</strong>
 </div>

@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: garapadev/postgres-postgis-pgvector:15-stable
+    container_name: crm-postgres
+    environment:
+      POSTGRES_DB: crm_mvp
+      POSTGRES_USER: crm_user
+      POSTGRES_PASSWORD: crm_password
+      PGDATA: /var/lib/postgresql/data/pgdata
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./database/init:/docker-entrypoint-initdb.d
+    networks:
+      - crm-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U crm_user -d crm_mvp"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  redis:
+    image: redis:7-alpine
+    container_name: crm-redis
+    ports:
+      - "6380:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - crm-network
+    restart: unless-stopped
+    command: redis-server --appendonly yes
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+
+networks:
+  crm-network:
+    driver: bridge

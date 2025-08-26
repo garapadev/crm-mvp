@@ -1,0 +1,700 @@
+2025-08-25T15:12:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:12:33: :: Created by npm, please don't edit manually.
+2025-08-25T15:12:33: ^
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: SyntaxError: Unexpected token ':'
+2025-08-25T15:12:33:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:12:33:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:12:33:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:12:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:12:33:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:12:33:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:12:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:12:33:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: Node.js v20.11.1
+2025-08-25T15:12:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:12:33: :: Created by npm, please don't edit manually.
+2025-08-25T15:12:33: ^
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: SyntaxError: Unexpected token ':'
+2025-08-25T15:12:33:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:12:33:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:12:33:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:12:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:12:33:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:12:33:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:12:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:12:33:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: Node.js v20.11.1
+2025-08-25T15:12:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:12:33: :: Created by npm, please don't edit manually.
+2025-08-25T15:12:33: ^
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: SyntaxError: Unexpected token ':'
+2025-08-25T15:12:33:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:12:33:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:12:33:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:12:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:12:33:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:12:33:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:12:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:12:33:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: Node.js v20.11.1
+2025-08-25T15:12:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:12:33: :: Created by npm, please don't edit manually.
+2025-08-25T15:12:33: ^
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: SyntaxError: Unexpected token ':'
+2025-08-25T15:12:33:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:12:33:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:12:33:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:12:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:12:33:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:12:33:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:12:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:12:33:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: Node.js v20.11.1
+2025-08-25T15:12:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:12:33: :: Created by npm, please don't edit manually.
+2025-08-25T15:12:33: ^
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: SyntaxError: Unexpected token ':'
+2025-08-25T15:12:33:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:12:33:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:12:33:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:12:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:12:33:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:12:33:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:12:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:12:33:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: Node.js v20.11.1
+2025-08-25T15:12:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:12:33: :: Created by npm, please don't edit manually.
+2025-08-25T15:12:33: ^
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: SyntaxError: Unexpected token ':'
+2025-08-25T15:12:33:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:12:33:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:12:33:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:12:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:12:33:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:12:33:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:12:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:12:33:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: Node.js v20.11.1
+2025-08-25T15:12:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:12:33: :: Created by npm, please don't edit manually.
+2025-08-25T15:12:33: ^
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: SyntaxError: Unexpected token ':'
+2025-08-25T15:12:33:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:12:33:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:12:33:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:12:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:12:33:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:12:33:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:12:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:12:33:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: Node.js v20.11.1
+2025-08-25T15:12:33: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:12:33: :: Created by npm, please don't edit manually.
+2025-08-25T15:12:33: ^
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: SyntaxError: Unexpected token ':'
+2025-08-25T15:12:33:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:12:33:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:12:33:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:12:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:12:33:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:12:33:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:12:33:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:12:33:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:12:33: 
+2025-08-25T15:12:33: Node.js v20.11.1
+2025-08-25T15:12:34: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:12:34: :: Created by npm, please don't edit manually.
+2025-08-25T15:12:34: ^
+2025-08-25T15:12:34: 
+2025-08-25T15:12:34: SyntaxError: Unexpected token ':'
+2025-08-25T15:12:34:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:12:34:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:12:34:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:12:34:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:12:34:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:12:34:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:12:34:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:12:34:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:12:34: 
+2025-08-25T15:12:34: Node.js v20.11.1
+2025-08-25T15:12:34: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:12:34: :: Created by npm, please don't edit manually.
+2025-08-25T15:12:34: ^
+2025-08-25T15:12:34: 
+2025-08-25T15:12:34: SyntaxError: Unexpected token ':'
+2025-08-25T15:12:34:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:12:34:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:12:34:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:12:34:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:12:34:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:12:34:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:12:34:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:12:34:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:12:34: 
+2025-08-25T15:12:34: Node.js v20.11.1
+2025-08-25T15:13:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:13:30: :: Created by npm, please don't edit manually.
+2025-08-25T15:13:30: ^
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: SyntaxError: Unexpected token ':'
+2025-08-25T15:13:30:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:13:30:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:13:30:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:13:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:13:30:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:13:30:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:13:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:13:30:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: Node.js v20.11.1
+2025-08-25T15:13:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:13:30: :: Created by npm, please don't edit manually.
+2025-08-25T15:13:30: ^
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: SyntaxError: Unexpected token ':'
+2025-08-25T15:13:30:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:13:30:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:13:30:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:13:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:13:30:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:13:30:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:13:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:13:30:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: Node.js v20.11.1
+2025-08-25T15:13:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:13:30: :: Created by npm, please don't edit manually.
+2025-08-25T15:13:30: ^
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: SyntaxError: Unexpected token ':'
+2025-08-25T15:13:30:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:13:30:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:13:30:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:13:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:13:30:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:13:30:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:13:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:13:30:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: Node.js v20.11.1
+2025-08-25T15:13:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:13:30: :: Created by npm, please don't edit manually.
+2025-08-25T15:13:30: ^
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: SyntaxError: Unexpected token ':'
+2025-08-25T15:13:30:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:13:30:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:13:30:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:13:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:13:30:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:13:30:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:13:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:13:30:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: Node.js v20.11.1
+2025-08-25T15:13:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:13:30: :: Created by npm, please don't edit manually.
+2025-08-25T15:13:30: ^
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: SyntaxError: Unexpected token ':'
+2025-08-25T15:13:30:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:13:30:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:13:30:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:13:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:13:30:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:13:30:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:13:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:13:30:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: Node.js v20.11.1
+2025-08-25T15:13:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:13:30: :: Created by npm, please don't edit manually.
+2025-08-25T15:13:30: ^
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: SyntaxError: Unexpected token ':'
+2025-08-25T15:13:30:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:13:30:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:13:30:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:13:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:13:30:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:13:30:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:13:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:13:30:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: Node.js v20.11.1
+2025-08-25T15:13:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:13:30: :: Created by npm, please don't edit manually.
+2025-08-25T15:13:30: ^
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: SyntaxError: Unexpected token ':'
+2025-08-25T15:13:30:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:13:30:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:13:30:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:13:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:13:30:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:13:30:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:13:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:13:30:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: Node.js v20.11.1
+2025-08-25T15:13:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:13:30: :: Created by npm, please don't edit manually.
+2025-08-25T15:13:30: ^
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: SyntaxError: Unexpected token ':'
+2025-08-25T15:13:30:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:13:30:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:13:30:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:13:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:13:30:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:13:30:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:13:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:13:30:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: Node.js v20.11.1
+2025-08-25T15:13:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:13:30: :: Created by npm, please don't edit manually.
+2025-08-25T15:13:30: ^
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: SyntaxError: Unexpected token ':'
+2025-08-25T15:13:30:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:13:30:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:13:30:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:13:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:13:30:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:13:30:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:13:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:13:30:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: Node.js v20.11.1
+2025-08-25T15:13:30: C:\PROGRAM FILES\NODEJS\NPM.CMD:1
+2025-08-25T15:13:30: :: Created by npm, please don't edit manually.
+2025-08-25T15:13:30: ^
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: SyntaxError: Unexpected token ':'
+2025-08-25T15:13:30:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:13:30:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:13:30:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:13:30:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:13:30:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:13:30:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:13:30:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:13:30:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:13:30: 
+2025-08-25T15:13:30: Node.js v20.11.1
+2025-08-25T15:14:12: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:14:12: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:14:12:           ^^^^^^^
+2025-08-25T15:14:12: 
+2025-08-25T15:14:12: SyntaxError: missing ) after argument list
+2025-08-25T15:14:12:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:14:12:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:14:12:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:14:12:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:14:12:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:14:12:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:14:12:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:14:12:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:14:12: 
+2025-08-25T15:14:12: Node.js v20.11.1
+2025-08-25T15:14:12: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:14:12: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:14:12:           ^^^^^^^
+2025-08-25T15:14:12: 
+2025-08-25T15:14:12: SyntaxError: missing ) after argument list
+2025-08-25T15:14:12:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:14:12:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:14:12:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:14:12:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:14:12:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:14:12:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:14:12:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:14:12:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:14:12: 
+2025-08-25T15:14:12: Node.js v20.11.1
+2025-08-25T15:14:13: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:14:13: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:14:13:           ^^^^^^^
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: SyntaxError: missing ) after argument list
+2025-08-25T15:14:13:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:14:13:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:14:13:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:14:13:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:14:13:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:14:13:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:14:13:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:14:13:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: Node.js v20.11.1
+2025-08-25T15:14:13: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:14:13: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:14:13:           ^^^^^^^
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: SyntaxError: missing ) after argument list
+2025-08-25T15:14:13:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:14:13:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:14:13:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:14:13:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:14:13:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:14:13:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:14:13:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:14:13:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: Node.js v20.11.1
+2025-08-25T15:14:13: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:14:13: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:14:13:           ^^^^^^^
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: SyntaxError: missing ) after argument list
+2025-08-25T15:14:13:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:14:13:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:14:13:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:14:13:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:14:13:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:14:13:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:14:13:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:14:13:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: Node.js v20.11.1
+2025-08-25T15:14:13: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:14:13: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:14:13:           ^^^^^^^
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: SyntaxError: missing ) after argument list
+2025-08-25T15:14:13:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:14:13:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:14:13:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:14:13:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:14:13:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:14:13:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:14:13:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:14:13:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: Node.js v20.11.1
+2025-08-25T15:14:13: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:14:13: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:14:13:           ^^^^^^^
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: SyntaxError: missing ) after argument list
+2025-08-25T15:14:13:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:14:13:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:14:13:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:14:13:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:14:13:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:14:13:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:14:13:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:14:13:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: Node.js v20.11.1
+2025-08-25T15:14:13: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:14:13: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:14:13:           ^^^^^^^
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: SyntaxError: missing ) after argument list
+2025-08-25T15:14:13:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:14:13:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:14:13:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:14:13:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:14:13:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:14:13:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:14:13:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:14:13:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: Node.js v20.11.1
+2025-08-25T15:14:13: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:14:13: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:14:13:           ^^^^^^^
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: SyntaxError: missing ) after argument list
+2025-08-25T15:14:13:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:14:13:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:14:13:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:14:13:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:14:13:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:14:13:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:14:13:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:14:13:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: Node.js v20.11.1
+2025-08-25T15:14:13: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:14:13: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:14:13:           ^^^^^^^
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: SyntaxError: missing ) after argument list
+2025-08-25T15:14:13:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:14:13:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:14:13:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:14:13:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:14:13:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:14:13:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:14:13:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:14:13:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:14:13: 
+2025-08-25T15:14:13: Node.js v20.11.1
+2025-08-25T15:17:22: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:17:22: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:17:22:           ^^^^^^^
+2025-08-25T15:17:22: 
+2025-08-25T15:17:22: SyntaxError: missing ) after argument list
+2025-08-25T15:17:22:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:17:22:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:17:22:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:17:22:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:17:22:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:17:22:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:17:22:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:17:22:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:17:22: 
+2025-08-25T15:17:22: Node.js v20.11.1
+2025-08-25T15:17:22: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:17:22: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:17:22:           ^^^^^^^
+2025-08-25T15:17:22: 
+2025-08-25T15:17:22: SyntaxError: missing ) after argument list
+2025-08-25T15:17:22:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:17:22:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:17:22:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:17:22:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:17:22:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:17:22:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:17:22:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:17:22:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:17:22: 
+2025-08-25T15:17:22: Node.js v20.11.1
+2025-08-25T15:17:22: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:17:22: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:17:22:           ^^^^^^^
+2025-08-25T15:17:22: 
+2025-08-25T15:17:22: SyntaxError: missing ) after argument list
+2025-08-25T15:17:22:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:17:22:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:17:22:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:17:22:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:17:22:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:17:22:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:17:22:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:17:22:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:17:22: 
+2025-08-25T15:17:22: Node.js v20.11.1
+2025-08-25T15:17:22: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:17:22: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:17:22:           ^^^^^^^
+2025-08-25T15:17:22: 
+2025-08-25T15:17:22: SyntaxError: missing ) after argument list
+2025-08-25T15:17:22:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:17:22:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:17:22:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:17:22:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:17:22:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:17:22:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:17:22:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:17:22:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:17:22: 
+2025-08-25T15:17:22: Node.js v20.11.1
+2025-08-25T15:17:22: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:17:22: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:17:22:           ^^^^^^^
+2025-08-25T15:17:22: 
+2025-08-25T15:17:22: SyntaxError: missing ) after argument list
+2025-08-25T15:17:22:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:17:22:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:17:22:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:17:22:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:17:22:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:17:22:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:17:22:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:17:22:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:17:22: 
+2025-08-25T15:17:22: Node.js v20.11.1
+2025-08-25T15:17:23: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:17:23: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:17:23:           ^^^^^^^
+2025-08-25T15:17:23: 
+2025-08-25T15:17:23: SyntaxError: missing ) after argument list
+2025-08-25T15:17:23:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:17:23:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:17:23:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:17:23:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:17:23:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:17:23:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:17:23:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:17:23:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:17:23: 
+2025-08-25T15:17:23: Node.js v20.11.1
+2025-08-25T15:17:23: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:17:23: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:17:23:           ^^^^^^^
+2025-08-25T15:17:23: 
+2025-08-25T15:17:23: SyntaxError: missing ) after argument list
+2025-08-25T15:17:23:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:17:23:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:17:23:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:17:23:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:17:23:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:17:23:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:17:23:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:17:23:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:17:23: 
+2025-08-25T15:17:23: Node.js v20.11.1
+2025-08-25T15:17:23: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:17:23: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:17:23:           ^^^^^^^
+2025-08-25T15:17:23: 
+2025-08-25T15:17:23: SyntaxError: missing ) after argument list
+2025-08-25T15:17:23:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:17:23:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:17:23:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:17:23:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:17:23:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:17:23:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:17:23:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:17:23:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:17:23: 
+2025-08-25T15:17:23: Node.js v20.11.1
+2025-08-25T15:17:23: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:17:23: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:17:23:           ^^^^^^^
+2025-08-25T15:17:23: 
+2025-08-25T15:17:23: SyntaxError: missing ) after argument list
+2025-08-25T15:17:23:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:17:23:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:17:23:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:17:23:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:17:23:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:17:23:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:17:23:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:17:23:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:17:23: 
+2025-08-25T15:17:23: Node.js v20.11.1
+2025-08-25T15:17:23: c:\projetos\mvp28\node_modules\.bin\next:2
+2025-08-25T15:17:23: basedir=$(dirname "$(echo "$0" | sed -e 's,\\,/,g')")
+2025-08-25T15:17:23:           ^^^^^^^
+2025-08-25T15:17:23: 
+2025-08-25T15:17:23: SyntaxError: missing ) after argument list
+2025-08-25T15:17:23:     at internalCompileFunction (node:internal/vm:77:18)
+2025-08-25T15:17:23:     at wrapSafe (node:internal/modules/cjs/loader:1288:20)
+2025-08-25T15:17:23:     at Module._compile (node:internal/modules/cjs/loader:1340:27)
+2025-08-25T15:17:23:     at Module._extensions..js (node:internal/modules/cjs/loader:1435:10)
+2025-08-25T15:17:23:     at Module.load (node:internal/modules/cjs/loader:1207:32)
+2025-08-25T15:17:23:     at Module._load (node:internal/modules/cjs/loader:1023:12)
+2025-08-25T15:17:23:     at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:135:12)
+2025-08-25T15:17:23:     at node:internal/main/run_main_module:28:49
+2025-08-25T15:17:23: 
+2025-08-25T15:17:23: Node.js v20.11.1
+2025-08-25T15:18:39:  ⨯ Failed to start server
+2025-08-25T15:18:39: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-25T15:18:39:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-25T15:18:39:     at new Promise (<anonymous>) {
+2025-08-25T15:18:39:   code: 'EADDRINUSE',
+2025-08-25T15:18:39:   errno: -4091,
+2025-08-25T15:18:39:   syscall: 'listen',
+2025-08-25T15:18:39:   address: '::',
+2025-08-25T15:18:39:   port: 3000
+2025-08-25T15:18:39: }
+2025-08-25T15:18:42:  ⨯ Failed to start server
+2025-08-25T15:18:42: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-25T15:18:42:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-25T15:18:42:     at new Promise (<anonymous>) {
+2025-08-25T15:18:42:   code: 'EADDRINUSE',
+2025-08-25T15:18:42:   errno: -4091,
+2025-08-25T15:18:42:   syscall: 'listen',
+2025-08-25T15:18:42:   address: '::',
+2025-08-25T15:18:42:   port: 3000
+2025-08-25T15:18:42: }
+2025-08-25T15:18:45:  ⨯ Failed to start server
+2025-08-25T15:18:45: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-25T15:18:45:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-25T15:18:45:     at new Promise (<anonymous>) {
+2025-08-25T15:18:45:   code: 'EADDRINUSE',
+2025-08-25T15:18:45:   errno: -4091,
+2025-08-25T15:18:45:   syscall: 'listen',
+2025-08-25T15:18:45:   address: '::',
+2025-08-25T15:18:45:   port: 3000
+2025-08-25T15:18:45: }
+2025-08-25T15:18:48:  ⨯ Failed to start server
+2025-08-25T15:18:48: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-25T15:18:48:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-25T15:18:48:     at new Promise (<anonymous>) {
+2025-08-25T15:18:48:   code: 'EADDRINUSE',
+2025-08-25T15:18:48:   errno: -4091,
+2025-08-25T15:18:48:   syscall: 'listen',
+2025-08-25T15:18:48:   address: '::',
+2025-08-25T15:18:48:   port: 3000
+2025-08-25T15:18:48: }
+2025-08-25T15:18:51:  ⨯ Failed to start server
+2025-08-25T15:18:51: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-25T15:18:51:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-25T15:18:51:     at new Promise (<anonymous>) {
+2025-08-25T15:18:51:   code: 'EADDRINUSE',
+2025-08-25T15:18:51:   errno: -4091,
+2025-08-25T15:18:51:   syscall: 'listen',
+2025-08-25T15:18:51:   address: '::',
+2025-08-25T15:18:51:   port: 3000
+2025-08-25T15:18:51: }
+2025-08-25T15:18:53:  ⨯ Failed to start server
+2025-08-25T15:18:53: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-25T15:18:53:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-25T15:18:53:     at new Promise (<anonymous>) {
+2025-08-25T15:18:53:   code: 'EADDRINUSE',
+2025-08-25T15:18:53:   errno: -4091,
+2025-08-25T15:18:53:   syscall: 'listen',
+2025-08-25T15:18:53:   address: '::',
+2025-08-25T15:18:53:   port: 3000
+2025-08-25T15:18:53: }
+2025-08-25T15:18:56:  ⨯ Failed to start server
+2025-08-25T15:18:56: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-25T15:18:56:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-25T15:18:56:     at new Promise (<anonymous>) {
+2025-08-25T15:18:56:   code: 'EADDRINUSE',
+2025-08-25T15:18:56:   errno: -4091,
+2025-08-25T15:18:56:   syscall: 'listen',
+2025-08-25T15:18:56:   address: '::',
+2025-08-25T15:18:56:   port: 3000
+2025-08-25T15:18:56: }
+2025-08-25T15:18:58:  ⨯ Failed to start server
+2025-08-25T15:18:58: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-25T15:18:58:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-25T15:18:58:     at new Promise (<anonymous>) {
+2025-08-25T15:18:58:   code: 'EADDRINUSE',
+2025-08-25T15:18:58:   errno: -4091,
+2025-08-25T15:18:58:   syscall: 'listen',
+2025-08-25T15:18:58:   address: '::',
+2025-08-25T15:18:58:   port: 3000
+2025-08-25T15:18:58: }
+2025-08-25T15:19:01:  ⨯ Failed to start server
+2025-08-25T15:19:01: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-25T15:19:01:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-25T15:19:01:     at new Promise (<anonymous>) {
+2025-08-25T15:19:01:   code: 'EADDRINUSE',
+2025-08-25T15:19:01:   errno: -4091,
+2025-08-25T15:19:01:   syscall: 'listen',
+2025-08-25T15:19:01:   address: '::',
+2025-08-25T15:19:01:   port: 3000
+2025-08-25T15:19:01: }
+2025-08-25T15:19:04:  ⨯ Failed to start server
+2025-08-25T15:19:04: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-25T15:19:04:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-25T15:19:04:     at new Promise (<anonymous>) {
+2025-08-25T15:19:04:   code: 'EADDRINUSE',
+2025-08-25T15:19:04:   errno: -4091,
+2025-08-25T15:19:04:   syscall: 'listen',
+2025-08-25T15:19:04:   address: '::',
+2025-08-25T15:19:04:   port: 3000
+2025-08-25T15:19:04: }

@@ -12,17 +12,17 @@ export function AppLayout({ children }: AppLayoutProps) {
   const [sidebarOpen, setSidebarOpen] = useState(false)
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex min-h-screen bg-gray-50">
       {/* Sidebar */}
       <AppSidebar open={sidebarOpen} setOpen={setSidebarOpen} />
       
       {/* Main content */}
-      <div className="flex-1 flex flex-col overflow-hidden lg:ml-0">
+      <div className="flex-1 flex flex-col lg:ml-0">
         {/* Header */}
         <AppHeader onMenuClick={() => setSidebarOpen(true)} />
         
         {/* Page content */}
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 p-6">
           {children}
         </main>
       </div>

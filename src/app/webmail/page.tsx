@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import { useRouter } from "next/navigation"
 import { AppLayout } from "@/components/layout/app-layout"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -31,13 +32,13 @@ import { EmailAccountsList } from "@/components/webmail/email-accounts-list"
 import { EmailList } from "@/components/webmail/email-list"
 import { EmailReader } from "@/components/webmail/email-reader"
 import { EmailComposer } from "@/components/webmail/email-composer"
-import { EmailAccountDialog } from "@/components/webmail/email-account-dialog"
+// Removido: import { EmailAccountDialog } from "@/components/webmail/email-account-dialog"
 
 interface EmailAccount {
   id: string
   name: string
   email: string
-  type: 'IMAP' | 'POP3' | 'EXCHANGE'
+  type: 'IMAP'
   isDefault: boolean
   isActive: boolean
   lastSyncAt?: string
@@ -90,6 +91,7 @@ interface Email {
 }
 
 export default function WebmailPage() {
+  const router = useRouter()
   const [emailAccounts, setEmailAccounts] = useState<EmailAccount[]>([])
   const [emails, setEmails] = useState<Email[]>([])
   const [selectedAccount, setSelectedAccount] = useState<EmailAccount | null>(null)
@@ -101,7 +103,7 @@ export default function WebmailPage() {
   const [filterRead, setFilterRead] = useState<string>("")
   const [filterStarred, setFilterStarred] = useState<string>("")
   const [showComposer, setShowComposer] = useState(false)
-  const [isAccountDialogOpen, setIsAccountDialogOpen] = useState(false)
+  // Removido: const [isAccountDialogOpen, setIsAccountDialogOpen] = useState(false)
   const [currentView, setCurrentView] = useState<'inbox' | 'sent' | 'drafts' | 'trash'>('inbox')
 
   // Estatísticas de emails
@@ -192,28 +194,7 @@ export default function WebmailPage() {
     }
   }
 
-  const handleAccountCreate = async (accountData: any) => {
-    try {
-      const response = await fetch('/api/email-accounts', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(accountData),
-      })
-
-      if (response.ok) {
-        toast.success('Conta de email criada com sucesso!')
-        setIsAccountDialogOpen(false)
-        fetchEmailAccounts()
-      } else {
-        const error = await response.json()
-        toast.error(error.error || 'Erro ao criar conta de email')
-      }
-    } catch (error) {
-      toast.error('Erro ao conectar com o servidor')
-    }
-  }
+  // Removido: handleAccountCreate - agora usa página dedicada
 
   const handleEmailUpdate = async (emailId: string, updates: any) => {
     try {
@@ -342,7 +323,7 @@ export default function WebmailPage() {
               Novo Email
             </Button>
             
-            <Button variant="outline" onClick={() => setIsAccountDialogOpen(true)}>
+            <Button variant="outline" onClick={() => router.push('/webmail/configurar')}>
               <Settings className="h-4 w-4 mr-2" />
               Configurar Conta
             </Button>
@@ -366,7 +347,7 @@ export default function WebmailPage() {
               <CardContent>
                 <Button 
                   className="w-full" 
-                  onClick={() => setIsAccountDialogOpen(true)}
+                  onClick={() => router.push('/webmail/configurar')}
                 >
                   <Plus className="h-4 w-4 mr-2" />
                   Adicionar Conta de Email
@@ -532,12 +513,7 @@ export default function WebmailPage() {
         replyTo={selectedEmail}
       />
 
-      {/* Dialog de Conta */}
-      <EmailAccountDialog
-        open={isAccountDialogOpen}
-        onOpenChange={setIsAccountDialogOpen}
-        onSubmit={handleAccountCreate}
-      />
+      {/* Removido: Dialog de Conta - agora usa página dedicada */}
     </AppLayout>
   )
 }

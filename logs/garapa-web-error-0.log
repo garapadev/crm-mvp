@@ -1,0 +1,260 @@
+2025-08-26T18:40:13:  ⨯ Failed to start server
+2025-08-26T18:40:14: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-26T18:40:14:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-26T18:40:14:     at new Promise (<anonymous>) {
+2025-08-26T18:40:14:   code: 'EADDRINUSE',
+2025-08-26T18:40:14:   errno: -4091,
+2025-08-26T18:40:14:   syscall: 'listen',
+2025-08-26T18:40:14:   address: '::',
+2025-08-26T18:40:14:   port: 3000
+2025-08-26T18:40:14: }
+2025-08-26T18:40:14: node:events:496
+2025-08-26T18:40:14:       throw er; // Unhandled 'error' event
+2025-08-26T18:40:14:       ^
+2025-08-26T18:40:14: 
+2025-08-26T18:40:14: Error: EPERM: operation not permitted, open 'c:\projetos\mvp28\.next\trace'
+2025-08-26T18:40:14: Emitted 'error' event on WriteStream instance at:
+2025-08-26T18:40:14:     at emitErrorNT (node:internal/streams/destroy:169:8)
+2025-08-26T18:40:14:     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+2025-08-26T18:40:14:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+2025-08-26T18:40:14:   errno: -4048,
+2025-08-26T18:40:14:   code: 'EPERM',
+2025-08-26T18:40:14:   syscall: 'open',
+2025-08-26T18:40:14:   path: 'c:\\projetos\\mvp28\\.next\\trace'
+2025-08-26T18:40:14: }
+2025-08-26T18:40:14: 
+2025-08-26T18:40:14: Node.js v20.11.1
+2025-08-26T18:40:17:  ⨯ Failed to start server
+2025-08-26T18:40:17: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-26T18:40:17:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-26T18:40:17:     at new Promise (<anonymous>) {
+2025-08-26T18:40:17:   code: 'EADDRINUSE',
+2025-08-26T18:40:17:   errno: -4091,
+2025-08-26T18:40:17:   syscall: 'listen',
+2025-08-26T18:40:17:   address: '::',
+2025-08-26T18:40:17:   port: 3000
+2025-08-26T18:40:17: }
+2025-08-26T18:40:17: node:events:496
+2025-08-26T18:40:17:       throw er; // Unhandled 'error' event
+2025-08-26T18:40:17:       ^
+2025-08-26T18:40:17: 
+2025-08-26T18:40:17: Error: EPERM: operation not permitted, open 'c:\projetos\mvp28\.next\trace'
+2025-08-26T18:40:17: Emitted 'error' event on WriteStream instance at:
+2025-08-26T18:40:17:     at emitErrorNT (node:internal/streams/destroy:169:8)
+2025-08-26T18:40:17:     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+2025-08-26T18:40:17:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+2025-08-26T18:40:17:   errno: -4048,
+2025-08-26T18:40:17:   code: 'EPERM',
+2025-08-26T18:40:17:   syscall: 'open',
+2025-08-26T18:40:17:   path: 'c:\\projetos\\mvp28\\.next\\trace'
+2025-08-26T18:40:17: }
+2025-08-26T18:40:17: 
+2025-08-26T18:40:17: Node.js v20.11.1
+2025-08-26T18:40:20:  ⨯ Failed to start server
+2025-08-26T18:40:20: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-26T18:40:20:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-26T18:40:20:     at new Promise (<anonymous>) {
+2025-08-26T18:40:20:   code: 'EADDRINUSE',
+2025-08-26T18:40:20:   errno: -4091,
+2025-08-26T18:40:20:   syscall: 'listen',
+2025-08-26T18:40:20:   address: '::',
+2025-08-26T18:40:20:   port: 3000
+2025-08-26T18:40:20: }
+2025-08-26T18:40:20: node:events:496
+2025-08-26T18:40:20:       throw er; // Unhandled 'error' event
+2025-08-26T18:40:20:       ^
+2025-08-26T18:40:20: 
+2025-08-26T18:40:20: Error: EPERM: operation not permitted, open 'c:\projetos\mvp28\.next\trace'
+2025-08-26T18:40:20: Emitted 'error' event on WriteStream instance at:
+2025-08-26T18:40:20:     at emitErrorNT (node:internal/streams/destroy:169:8)
+2025-08-26T18:40:20:     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+2025-08-26T18:40:20:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+2025-08-26T18:40:20:   errno: -4048,
+2025-08-26T18:40:20:   code: 'EPERM',
+2025-08-26T18:40:20:   syscall: 'open',
+2025-08-26T18:40:20:   path: 'c:\\projetos\\mvp28\\.next\\trace'
+2025-08-26T18:40:20: }
+2025-08-26T18:40:20: 
+2025-08-26T18:40:20: Node.js v20.11.1
+2025-08-26T18:40:24:  ⨯ Failed to start server
+2025-08-26T18:40:24: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-26T18:40:24:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-26T18:40:24:     at new Promise (<anonymous>) {
+2025-08-26T18:40:24:   code: 'EADDRINUSE',
+2025-08-26T18:40:24:   errno: -4091,
+2025-08-26T18:40:24:   syscall: 'listen',
+2025-08-26T18:40:24:   address: '::',
+2025-08-26T18:40:24:   port: 3000
+2025-08-26T18:40:24: }
+2025-08-26T18:40:24: node:events:496
+2025-08-26T18:40:24:       throw er; // Unhandled 'error' event
+2025-08-26T18:40:24:       ^
+2025-08-26T18:40:24: 
+2025-08-26T18:40:24: Error: EPERM: operation not permitted, open 'c:\projetos\mvp28\.next\trace'
+2025-08-26T18:40:24: Emitted 'error' event on WriteStream instance at:
+2025-08-26T18:40:24:     at emitErrorNT (node:internal/streams/destroy:169:8)
+2025-08-26T18:40:24:     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+2025-08-26T18:40:24:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+2025-08-26T18:40:24:   errno: -4048,
+2025-08-26T18:40:24:   code: 'EPERM',
+2025-08-26T18:40:24:   syscall: 'open',
+2025-08-26T18:40:24:   path: 'c:\\projetos\\mvp28\\.next\\trace'
+2025-08-26T18:40:24: }
+2025-08-26T18:40:24: 
+2025-08-26T18:40:24: Node.js v20.11.1
+2025-08-26T18:40:26:  ⨯ Failed to start server
+2025-08-26T18:40:26: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-26T18:40:26:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-26T18:40:26:     at new Promise (<anonymous>) {
+2025-08-26T18:40:26:   code: 'EADDRINUSE',
+2025-08-26T18:40:26:   errno: -4091,
+2025-08-26T18:40:26:   syscall: 'listen',
+2025-08-26T18:40:26:   address: '::',
+2025-08-26T18:40:26:   port: 3000
+2025-08-26T18:40:26: }
+2025-08-26T18:40:26: node:events:496
+2025-08-26T18:40:26:       throw er; // Unhandled 'error' event
+2025-08-26T18:40:26:       ^
+2025-08-26T18:40:26: 
+2025-08-26T18:40:26: Error: EPERM: operation not permitted, open 'c:\projetos\mvp28\.next\trace'
+2025-08-26T18:40:26: Emitted 'error' event on WriteStream instance at:
+2025-08-26T18:40:26:     at emitErrorNT (node:internal/streams/destroy:169:8)
+2025-08-26T18:40:26:     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+2025-08-26T18:40:26:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+2025-08-26T18:40:26:   errno: -4048,
+2025-08-26T18:40:26:   code: 'EPERM',
+2025-08-26T18:40:26:   syscall: 'open',
+2025-08-26T18:40:26:   path: 'c:\\projetos\\mvp28\\.next\\trace'
+2025-08-26T18:40:26: }
+2025-08-26T18:40:26: 
+2025-08-26T18:40:26: Node.js v20.11.1
+2025-08-26T18:40:29:  ⨯ Failed to start server
+2025-08-26T18:40:29: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-26T18:40:29:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-26T18:40:29:     at new Promise (<anonymous>) {
+2025-08-26T18:40:29:   code: 'EADDRINUSE',
+2025-08-26T18:40:29:   errno: -4091,
+2025-08-26T18:40:29:   syscall: 'listen',
+2025-08-26T18:40:29:   address: '::',
+2025-08-26T18:40:29:   port: 3000
+2025-08-26T18:40:29: }
+2025-08-26T18:40:29: node:events:496
+2025-08-26T18:40:29:       throw er; // Unhandled 'error' event
+2025-08-26T18:40:29:       ^
+2025-08-26T18:40:29: 
+2025-08-26T18:40:29: Error: EPERM: operation not permitted, open 'c:\projetos\mvp28\.next\trace'
+2025-08-26T18:40:29: Emitted 'error' event on WriteStream instance at:
+2025-08-26T18:40:29:     at emitErrorNT (node:internal/streams/destroy:169:8)
+2025-08-26T18:40:29:     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+2025-08-26T18:40:29:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+2025-08-26T18:40:29:   errno: -4048,
+2025-08-26T18:40:29:   code: 'EPERM',
+2025-08-26T18:40:29:   syscall: 'open',
+2025-08-26T18:40:29:   path: 'c:\\projetos\\mvp28\\.next\\trace'
+2025-08-26T18:40:29: }
+2025-08-26T18:40:29: 
+2025-08-26T18:40:29: Node.js v20.11.1
+2025-08-26T18:40:32:  ⨯ Failed to start server
+2025-08-26T18:40:32: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-26T18:40:32:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-26T18:40:32:     at new Promise (<anonymous>) {
+2025-08-26T18:40:32:   code: 'EADDRINUSE',
+2025-08-26T18:40:32:   errno: -4091,
+2025-08-26T18:40:32:   syscall: 'listen',
+2025-08-26T18:40:32:   address: '::',
+2025-08-26T18:40:32:   port: 3000
+2025-08-26T18:40:32: }
+2025-08-26T18:40:32: node:events:496
+2025-08-26T18:40:32:       throw er; // Unhandled 'error' event
+2025-08-26T18:40:32:       ^
+2025-08-26T18:40:32: 
+2025-08-26T18:40:32: Error: EPERM: operation not permitted, open 'c:\projetos\mvp28\.next\trace'
+2025-08-26T18:40:32: Emitted 'error' event on WriteStream instance at:
+2025-08-26T18:40:32:     at emitErrorNT (node:internal/streams/destroy:169:8)
+2025-08-26T18:40:32:     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+2025-08-26T18:40:32:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+2025-08-26T18:40:32:   errno: -4048,
+2025-08-26T18:40:32:   code: 'EPERM',
+2025-08-26T18:40:32:   syscall: 'open',
+2025-08-26T18:40:32:   path: 'c:\\projetos\\mvp28\\.next\\trace'
+2025-08-26T18:40:32: }
+2025-08-26T18:40:32: 
+2025-08-26T18:40:32: Node.js v20.11.1
+2025-08-26T18:40:34:  ⨯ Failed to start server
+2025-08-26T18:40:34: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-26T18:40:34:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-26T18:40:34:     at new Promise (<anonymous>) {
+2025-08-26T18:40:34:   code: 'EADDRINUSE',
+2025-08-26T18:40:34:   errno: -4091,
+2025-08-26T18:40:34:   syscall: 'listen',
+2025-08-26T18:40:34:   address: '::',
+2025-08-26T18:40:34:   port: 3000
+2025-08-26T18:40:34: }
+2025-08-26T18:40:34: node:events:496
+2025-08-26T18:40:34:       throw er; // Unhandled 'error' event
+2025-08-26T18:40:34:       ^
+2025-08-26T18:40:34: 
+2025-08-26T18:40:34: Error: EPERM: operation not permitted, open 'c:\projetos\mvp28\.next\trace'
+2025-08-26T18:40:34: Emitted 'error' event on WriteStream instance at:
+2025-08-26T18:40:34:     at emitErrorNT (node:internal/streams/destroy:169:8)
+2025-08-26T18:40:34:     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+2025-08-26T18:40:34:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+2025-08-26T18:40:34:   errno: -4048,
+2025-08-26T18:40:34:   code: 'EPERM',
+2025-08-26T18:40:34:   syscall: 'open',
+2025-08-26T18:40:34:   path: 'c:\\projetos\\mvp28\\.next\\trace'
+2025-08-26T18:40:34: }
+2025-08-26T18:40:34: 
+2025-08-26T18:40:34: Node.js v20.11.1
+2025-08-26T18:40:37:  ⨯ Failed to start server
+2025-08-26T18:40:37: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-26T18:40:37:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-26T18:40:37:     at new Promise (<anonymous>) {
+2025-08-26T18:40:37:   code: 'EADDRINUSE',
+2025-08-26T18:40:37:   errno: -4091,
+2025-08-26T18:40:37:   syscall: 'listen',
+2025-08-26T18:40:37:   address: '::',
+2025-08-26T18:40:37:   port: 3000
+2025-08-26T18:40:37: }
+2025-08-26T18:40:37: node:events:496
+2025-08-26T18:40:37:       throw er; // Unhandled 'error' event
+2025-08-26T18:40:37:       ^
+2025-08-26T18:40:37: 
+2025-08-26T18:40:37: Error: EPERM: operation not permitted, open 'c:\projetos\mvp28\.next\trace'
+2025-08-26T18:40:37: Emitted 'error' event on WriteStream instance at:
+2025-08-26T18:40:37:     at emitErrorNT (node:internal/streams/destroy:169:8)
+2025-08-26T18:40:37:     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+2025-08-26T18:40:37:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+2025-08-26T18:40:37:   errno: -4048,
+2025-08-26T18:40:37:   code: 'EPERM',
+2025-08-26T18:40:37:   syscall: 'open',
+2025-08-26T18:40:37:   path: 'c:\\projetos\\mvp28\\.next\\trace'
+2025-08-26T18:40:37: }
+2025-08-26T18:40:37: 
+2025-08-26T18:40:37: Node.js v20.11.1
+2025-08-26T18:40:40:  ⨯ Failed to start server
+2025-08-26T18:40:40: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-26T18:40:40:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-26T18:40:40:     at new Promise (<anonymous>) {
+2025-08-26T18:40:40:   code: 'EADDRINUSE',
+2025-08-26T18:40:40:   errno: -4091,
+2025-08-26T18:40:40:   syscall: 'listen',
+2025-08-26T18:40:40:   address: '::',
+2025-08-26T18:40:40:   port: 3000
+2025-08-26T18:40:40: }
+2025-08-26T18:40:40: node:events:496
+2025-08-26T18:40:40:       throw er; // Unhandled 'error' event
+2025-08-26T18:40:40:       ^
+2025-08-26T18:40:40: 
+2025-08-26T18:40:40: Error: EPERM: operation not permitted, open 'c:\projetos\mvp28\.next\trace'
+2025-08-26T18:40:40: Emitted 'error' event on WriteStream instance at:
+2025-08-26T18:40:40:     at emitErrorNT (node:internal/streams/destroy:169:8)
+2025-08-26T18:40:40:     at emitErrorCloseNT (node:internal/streams/destroy:128:3)
+2025-08-26T18:40:40:     at process.processTicksAndRejections (node:internal/process/task_queues:82:21) {
+2025-08-26T18:40:40:   errno: -4048,
+2025-08-26T18:40:40:   code: 'EPERM',
+2025-08-26T18:40:40:   syscall: 'open',
+2025-08-26T18:40:40:   path: 'c:\\projetos\\mvp28\\.next\\trace'
+2025-08-26T18:40:40: }
+2025-08-26T18:40:40: 
+2025-08-26T18:40:40: Node.js v20.11.1

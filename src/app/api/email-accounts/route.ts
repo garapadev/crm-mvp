@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
 import { PrismaClient } from '@prisma/client'
+import { getServerSession } from 'next-auth'
+import { authConfig } from '@/lib/auth'
 
 const prisma = new PrismaClient()
 
@@ -18,7 +20,6 @@ const createEmailAccountSchema = z.object({
   username: z.string().min(1, 'Usuário é obrigatório'),
   password: z.string().min(1, 'Senha é obrigatória'),
   isDefault: z.boolean().default(false),
-  employeeId: z.string().min(1, 'ID do colaborador é obrigatório'),
 })
 
 // Schema de validação para atualização
@@ -282,12 +283,25 @@ export async function GET(request: NextRequest) {
 // POST /api/email-accounts - Criar nova conta de email
 export async function POST(request: NextRequest) {
   try {
+    // Obter sessão do usuário logado
+    const session = await getServerSession(authConfig)
+    
+    if (!session?.user?.employeeId) {
+      return NextResponse.json(
+        { error: 'Usuário não autenticado ou não possui colaborador associado' },
+        { status: 401 }
+      )
+    }
+
     const body = await request.json()
     const data = createEmailAccountSchema.parse(body)
 
+    // Usar o employeeId do usuário logado
+    const employeeId = session.user.employeeId
+
     // Verificar se o colaborador existe
     const employee = await prisma.employee.findUnique({
-      where: { id: data.employeeId }
+      where: { id: employeeId }
     })
 
     if (!employee) {
@@ -301,7 +315,7 @@ export async function POST(request: NextRequest) {
     const existingAccount = await prisma.emailAccount.findUnique({
       where: {
         employeeId_email: {
-          employeeId: data.employeeId,
+          employeeId: employeeId,
           email: data.email
         }
       }
@@ -318,7 +332,7 @@ export async function POST(request: NextRequest) {
     if (data.isDefault) {
       await prisma.emailAccount.updateMany({
         where: {
-          employeeId: data.employeeId,
+          employeeId: employeeId,
           isDefault: true
         },
         data: {
@@ -331,6 +345,7 @@ export async function POST(request: NextRequest) {
     const emailAccount = await prisma.emailAccount.create({
       data: {
         ...data,
+        employeeId: employeeId,
         type: data.type,
       },
       include: {

@@ -21,7 +21,7 @@ const updateContactSchema = z.object({
   source: z.string().optional(),
   latitude: z.number().optional(),
   longitude: z.number().optional(),
-  customFields: z.record(z.any()).optional(),
+  customFields: z.record(z.string(), z.any()).optional(),
 })
 
 /**
@@ -60,11 +60,12 @@ const updateContactSchema = z.object({
  */
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const contact = await prisma.contact.findUnique({
-      where: { id: params.id },
+      where: { id },
       include: {
         leads: {
           select: {
@@ -233,15 +234,16 @@ export async function GET(
  */
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     const body = await request.json()
     const validatedData = updateContactSchema.parse(body)
 
     // Verificar se o contato existe
     const existingContact = await prisma.contact.findUnique({
-      where: { id: params.id }
+      where: { id }
     })
 
     if (!existingContact) {
@@ -266,7 +268,7 @@ export async function PUT(
     }
 
     const contact = await prisma.contact.update({
-      where: { id: params.id },
+      where: { id },
       data: validatedData
     })
 
@@ -274,7 +276,7 @@ export async function PUT(
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(
-        { error: 'Dados inválidos', details: error.errors },
+        { error: 'Dados inválidos', details: error.issues },
         { status: 400 }
       )
     }
@@ -327,12 +329,13 @@ export async function PUT(
  */
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
+    const { id } = await params
     // Verificar se o contato existe
     const existingContact = await prisma.contact.findUnique({
-      where: { id: params.id }
+      where: { id }
     })
 
     if (!existingContact) {
@@ -343,7 +346,7 @@ export async function DELETE(
     }
 
     await prisma.contact.delete({
-      where: { id: params.id }
+      where: { id }
     })
 
     return NextResponse.json({

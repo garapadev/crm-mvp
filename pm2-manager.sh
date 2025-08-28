@@ -16,17 +16,37 @@ show_help() {
     echo "Uso: ./pm2-manager.sh [COMANDO]"
     echo ""
     echo "Comandos disponíveis:"
-    echo "  start     - Iniciar todos os serviços"
-    echo "  stop      - Parar todos os serviços"
-    echo "  restart   - Reiniciar todos os serviços"
-    echo "  reload    - Recarregar todos os serviços (zero downtime)"
-    echo "  status    - Mostrar status dos serviços"
-    echo "  logs      - Mostrar logs em tempo real"
-    echo "  logs-web  - Mostrar logs apenas do serviço web"
-    echo "  monitor   - Abrir monitor PM2"
-    echo "  delete    - Remover todos os serviços"
-    echo "  setup     - Configuração inicial"
-    echo "  help      - Mostrar esta ajuda"
+    echo ""
+    echo "📋 Gerenciamento Geral:"
+    echo "  start           - Iniciar todos os serviços"
+    echo "  stop            - Parar todos os serviços"
+    echo "  restart         - Reiniciar todos os serviços"
+    echo "  reload          - Recarregar todos os serviços (zero downtime)"
+    echo "  status          - Mostrar status dos serviços"
+    echo "  health          - Verificar saúde dos serviços"
+    echo "  delete          - Remover todos os serviços"
+    echo "  setup           - Configuração inicial"
+    echo ""
+    echo "🔧 Gerenciamento Individual:"
+    echo "  start-service   <nome>     - Iniciar serviço específico"
+    echo "  stop-service    <nome>     - Parar serviço específico"
+    echo "  restart-service <nome>     - Reiniciar serviço específico"
+    echo "  scale           <nome> <n> - Escalar serviço para N instâncias"
+    echo ""
+    echo "📝 Logs e Monitoramento:"
+    echo "  logs            - Mostrar logs em tempo real (todos)"
+    echo "  logs-web        - Mostrar logs apenas do serviço web"
+    echo "  logs-workers    - Mostrar logs dos workers"
+    echo "  logs-service    <nome>     - Mostrar logs de serviço específico"
+    echo "  monitor         - Abrir monitor PM2"
+    echo "  flush           - Limpar todos os logs"
+    echo ""
+    echo "🛠️ Manutenção:"
+    echo "  backup          - Fazer backup da configuração"
+    echo "  update          - Atualizar aplicação completa"
+    echo "  help            - Mostrar esta ajuda"
+    echo ""
+    echo "📌 Serviços disponíveis: crm-web, webhook-worker, email-sync"
 }
 
 # Função para verificar se PM2 está instalado
@@ -120,6 +140,138 @@ show_web_logs() {
     pm2 logs crm-web --lines 50
 }
 
+# Mostrar logs dos workers
+show_worker_logs() {
+    echo -e "${BLUE}📝 Logs dos workers (Ctrl+C para sair):${NC}"
+    pm2 logs webhook-worker email-sync --lines 50
+}
+
+# Mostrar logs de um serviço específico
+show_service_logs() {
+    if [ -z "$2" ]; then
+        echo -e "${RED}❌ Especifique o nome do serviço${NC}"
+        echo "Serviços disponíveis: crm-web, webhook-worker, email-sync"
+        exit 1
+    fi
+    echo -e "${BLUE}📝 Logs do serviço $2 (Ctrl+C para sair):${NC}"
+    pm2 logs "$2" --lines 50
+}
+
+# Reiniciar serviço específico
+restart_service() {
+    if [ -z "$2" ]; then
+        echo -e "${RED}❌ Especifique o nome do serviço${NC}"
+        echo "Serviços disponíveis: crm-web, webhook-worker, email-sync"
+        exit 1
+    fi
+    echo -e "${YELLOW}🔄 Reiniciando serviço $2...${NC}"
+    pm2 restart "$2"
+    echo -e "${GREEN}✅ Serviço $2 reiniciado!${NC}"
+}
+
+# Parar serviço específico
+stop_service() {
+    if [ -z "$2" ]; then
+        echo -e "${RED}❌ Especifique o nome do serviço${NC}"
+        echo "Serviços disponíveis: crm-web, webhook-worker, email-sync"
+        exit 1
+    fi
+    echo -e "${YELLOW}⏹️ Parando serviço $2...${NC}"
+    pm2 stop "$2"
+    echo -e "${GREEN}✅ Serviço $2 parado!${NC}"
+}
+
+# Iniciar serviço específico
+start_service() {
+    if [ -z "$2" ]; then
+        echo -e "${RED}❌ Especifique o nome do serviço${NC}"
+        echo "Serviços disponíveis: crm-web, webhook-worker, email-sync"
+        exit 1
+    fi
+    echo -e "${BLUE}🚀 Iniciando serviço $2...${NC}"
+    pm2 start ecosystem.config.js --only "$2"
+    echo -e "${GREEN}✅ Serviço $2 iniciado!${NC}"
+}
+
+# Escalar serviço (alterar número de instâncias)
+scale_service() {
+    if [ -z "$2" ] || [ -z "$3" ]; then
+        echo -e "${RED}❌ Especifique o nome do serviço e número de instâncias${NC}"
+        echo "Uso: ./pm2-manager.sh scale <serviço> <instâncias>"
+        echo "Exemplo: ./pm2-manager.sh scale webhook-worker 3"
+        exit 1
+    fi
+    echo -e "${BLUE}📈 Escalando serviço $2 para $3 instâncias...${NC}"
+    pm2 scale "$2" "$3"
+    echo -e "${GREEN}✅ Serviço $2 escalado para $3 instâncias!${NC}"
+}
+
+# Flush logs
+flush_logs() {
+    echo -e "${YELLOW}🗑️ Limpando logs...${NC}"
+    pm2 flush
+    echo -e "${GREEN}✅ Logs limpos!${NC}"
+}
+
+# Backup de configuração
+backup_config() {
+    echo -e "${BLUE}💾 Fazendo backup da configuração...${NC}"
+    cp ecosystem.config.js "ecosystem.config.js.backup.$(date +%Y%m%d_%H%M%S)"
+    pm2 dump
+    echo -e "${GREEN}✅ Backup criado!${NC}"
+}
+
+# Verificar saúde dos serviços
+health_check() {
+    echo -e "${BLUE}🏥 Verificando saúde dos serviços...${NC}"
+    echo ""
+    
+    # Verificar se os serviços estão rodando
+    services=("crm-web" "webhook-worker" "email-sync")
+    
+    for service in "${services[@]}"; do
+        status=$(pm2 jlist | jq -r ".[] | select(.name==\"$service\") | .pm2_env.status")
+        if [ "$status" = "online" ]; then
+            echo -e "${GREEN}✅ $service: Online${NC}"
+        elif [ "$status" = "stopped" ]; then
+            echo -e "${RED}❌ $service: Parado${NC}"
+        elif [ "$status" = "errored" ]; then
+            echo -e "${RED}💥 $service: Com erro${NC}"
+        else
+            echo -e "${YELLOW}⚠️ $service: Status desconhecido ($status)${NC}"
+        fi
+    done
+    
+    echo ""
+    echo -e "${BLUE}📊 Resumo do sistema:${NC}"
+    pm2 status
+}
+
+# Atualizar aplicação
+update_app() {
+    echo -e "${BLUE}🔄 Atualizando aplicação...${NC}"
+    
+    # Fazer backup
+    backup_config
+    
+    # Atualizar código
+    git pull origin main
+    
+    # Instalar dependências
+    npm ci
+    
+    # Build da aplicação
+    npm run build
+    
+    # Executar migrations
+    npm run db:migrate
+    
+    # Recarregar serviços
+    pm2 reload ecosystem.config.js
+    
+    echo -e "${GREEN}✅ Aplicação atualizada!${NC}"
+}
+
 # Abrir monitor PM2
 open_monitor() {
     echo -e "${BLUE}📊 Abrindo monitor PM2...${NC}"
@@ -164,14 +316,49 @@ main() {
         status)
             show_status
             ;;
+        health)
+            health_check
+            ;;
         logs)
             show_logs
             ;;
         logs-web)
             show_web_logs
             ;;
+        logs-workers)
+            show_worker_logs
+            ;;
+        logs-service)
+            show_service_logs "$@"
+            ;;
+        start-service)
+            check_config
+            start_service "$@"
+            ;;
+        stop-service)
+            check_config
+            stop_service "$@"
+            ;;
+        restart-service)
+            check_config
+            restart_service "$@"
+            ;;
+        scale)
+            check_config
+            scale_service "$@"
+            ;;
         monitor)
             open_monitor
+            ;;
+        flush)
+            flush_logs
+            ;;
+        backup)
+            backup_config
+            ;;
+        update)
+            check_config
+            update_app
             ;;
         delete)
             delete_services
@@ -179,7 +366,7 @@ main() {
         setup)
             setup
             ;;
-        help|--help|-h)
+        help|--help|-h|"")
             show_help
             ;;
         *)

@@ -718,3 +718,233 @@
 2025-08-25T15:19:04: }
 2025-08-25T15:19:04: [?25h
 2025-08-25T15:19:04: 
+2025-08-28T07:54:19:  ⨯ Failed to start server
+2025-08-28T07:54:19: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:19:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:19:     at new Promise (<anonymous>) {
+2025-08-28T07:54:19:   code: 'EADDRINUSE',
+2025-08-28T07:54:19:   errno: -98,
+2025-08-28T07:54:19:   syscall: 'listen',
+2025-08-28T07:54:19:   address: '::',
+2025-08-28T07:54:19:   port: 3000
+2025-08-28T07:54:19: }
+2025-08-28T07:54:20:  ⨯ Failed to start server
+2025-08-28T07:54:20: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:20:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:20:     at new Promise (<anonymous>) {
+2025-08-28T07:54:20:   code: 'EADDRINUSE',
+2025-08-28T07:54:20:   errno: -98,
+2025-08-28T07:54:20:   syscall: 'listen',
+2025-08-28T07:54:20:   address: '::',
+2025-08-28T07:54:20:   port: 3000
+2025-08-28T07:54:20: }
+2025-08-28T07:54:20:  ⨯ Failed to start server
+2025-08-28T07:54:20: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:20:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:20:     at new Promise (<anonymous>) {
+2025-08-28T07:54:20:   code: 'EADDRINUSE',
+2025-08-28T07:54:20:   errno: -98,
+2025-08-28T07:54:20:   syscall: 'listen',
+2025-08-28T07:54:20:   address: '::',
+2025-08-28T07:54:20:   port: 3000
+2025-08-28T07:54:20: }
+2025-08-28T07:54:21:  ⨯ Failed to start server
+2025-08-28T07:54:21: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:21:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:21:     at new Promise (<anonymous>) {
+2025-08-28T07:54:21:   code: 'EADDRINUSE',
+2025-08-28T07:54:21:   errno: -98,
+2025-08-28T07:54:21:   syscall: 'listen',
+2025-08-28T07:54:21:   address: '::',
+2025-08-28T07:54:21:   port: 3000
+2025-08-28T07:54:21: }
+2025-08-28T07:54:21:  ⨯ Failed to start server
+2025-08-28T07:54:21: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:21:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:21:     at new Promise (<anonymous>) {
+2025-08-28T07:54:21:   code: 'EADDRINUSE',
+2025-08-28T07:54:21:   errno: -98,
+2025-08-28T07:54:21:   syscall: 'listen',
+2025-08-28T07:54:21:   address: '::',
+2025-08-28T07:54:21:   port: 3000
+2025-08-28T07:54:21: }
+2025-08-28T07:54:22:  ⨯ Failed to start server
+2025-08-28T07:54:22: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:22:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:22:     at new Promise (<anonymous>) {
+2025-08-28T07:54:22:   code: 'EADDRINUSE',
+2025-08-28T07:54:22:   errno: -98,
+2025-08-28T07:54:22:   syscall: 'listen',
+2025-08-28T07:54:22:   address: '::',
+2025-08-28T07:54:22:   port: 3000
+2025-08-28T07:54:22: }
+2025-08-28T07:54:22:  ⨯ Failed to start server
+2025-08-28T07:54:22: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:22:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:22:     at new Promise (<anonymous>) {
+2025-08-28T07:54:22:   code: 'EADDRINUSE',
+2025-08-28T07:54:22:   errno: -98,
+2025-08-28T07:54:22:   syscall: 'listen',
+2025-08-28T07:54:22:   address: '::',
+2025-08-28T07:54:22:   port: 3000
+2025-08-28T07:54:22: }
+2025-08-28T07:54:23:  ⨯ Failed to start server
+2025-08-28T07:54:23: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:23:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:23:     at new Promise (<anonymous>) {
+2025-08-28T07:54:23:   code: 'EADDRINUSE',
+2025-08-28T07:54:23:   errno: -98,
+2025-08-28T07:54:23:   syscall: 'listen',
+2025-08-28T07:54:23:   address: '::',
+2025-08-28T07:54:23:   port: 3000
+2025-08-28T07:54:23: }
+2025-08-28T07:54:23:  ⨯ Failed to start server
+2025-08-28T07:54:23: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:23:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:23:     at new Promise (<anonymous>) {
+2025-08-28T07:54:23:   code: 'EADDRINUSE',
+2025-08-28T07:54:23:   errno: -98,
+2025-08-28T07:54:23:   syscall: 'listen',
+2025-08-28T07:54:23:   address: '::',
+2025-08-28T07:54:23:   port: 3000
+2025-08-28T07:54:23: }
+2025-08-28T07:54:24:  ⨯ Failed to start server
+2025-08-28T07:54:24: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:24:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:24:     at new Promise (<anonymous>) {
+2025-08-28T07:54:24:   code: 'EADDRINUSE',
+2025-08-28T07:54:24:   errno: -98,
+2025-08-28T07:54:24:   syscall: 'listen',
+2025-08-28T07:54:24:   address: '::',
+2025-08-28T07:54:24:   port: 3000
+2025-08-28T07:54:24: }
+2025-08-28T07:54:53:  ⨯ Failed to start server
+2025-08-28T07:54:53: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:53:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:53:     at new Promise (<anonymous>) {
+2025-08-28T07:54:53:   code: 'EADDRINUSE',
+2025-08-28T07:54:53:   errno: -98,
+2025-08-28T07:54:53:   syscall: 'listen',
+2025-08-28T07:54:53:   address: '::',
+2025-08-28T07:54:53:   port: 3000
+2025-08-28T07:54:53: }
+2025-08-28T07:54:54:  ⨯ Failed to start server
+2025-08-28T07:54:54: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:54:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:54:     at new Promise (<anonymous>) {
+2025-08-28T07:54:54:   code: 'EADDRINUSE',
+2025-08-28T07:54:54:   errno: -98,
+2025-08-28T07:54:54:   syscall: 'listen',
+2025-08-28T07:54:54:   address: '::',
+2025-08-28T07:54:54:   port: 3000
+2025-08-28T07:54:54: }
+2025-08-28T07:54:54:  ⨯ Failed to start server
+2025-08-28T07:54:55: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:55:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:55:     at new Promise (<anonymous>) {
+2025-08-28T07:54:55:   code: 'EADDRINUSE',
+2025-08-28T07:54:55:   errno: -98,
+2025-08-28T07:54:55:   syscall: 'listen',
+2025-08-28T07:54:55:   address: '::',
+2025-08-28T07:54:55:   port: 3000
+2025-08-28T07:54:55: }
+2025-08-28T07:54:55:  ⨯ Failed to start server
+2025-08-28T07:54:55: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:55:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:55:     at new Promise (<anonymous>) {
+2025-08-28T07:54:55:   code: 'EADDRINUSE',
+2025-08-28T07:54:55:   errno: -98,
+2025-08-28T07:54:55:   syscall: 'listen',
+2025-08-28T07:54:55:   address: '::',
+2025-08-28T07:54:55:   port: 3000
+2025-08-28T07:54:55: }
+2025-08-28T07:54:55:  ⨯ Failed to start server
+2025-08-28T07:54:55: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:55:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:55:     at new Promise (<anonymous>) {
+2025-08-28T07:54:55:   code: 'EADDRINUSE',
+2025-08-28T07:54:55:   errno: -98,
+2025-08-28T07:54:55:   syscall: 'listen',
+2025-08-28T07:54:55:   address: '::',
+2025-08-28T07:54:55:   port: 3000
+2025-08-28T07:54:55: }
+2025-08-28T07:54:56:  ⨯ Failed to start server
+2025-08-28T07:54:56: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:56:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:56:     at new Promise (<anonymous>) {
+2025-08-28T07:54:56:   code: 'EADDRINUSE',
+2025-08-28T07:54:56:   errno: -98,
+2025-08-28T07:54:56:   syscall: 'listen',
+2025-08-28T07:54:56:   address: '::',
+2025-08-28T07:54:56:   port: 3000
+2025-08-28T07:54:56: }
+2025-08-28T07:54:57:  ⨯ Failed to start server
+2025-08-28T07:54:57: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:57:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:57:     at new Promise (<anonymous>) {
+2025-08-28T07:54:57:   code: 'EADDRINUSE',
+2025-08-28T07:54:57:   errno: -98,
+2025-08-28T07:54:57:   syscall: 'listen',
+2025-08-28T07:54:57:   address: '::',
+2025-08-28T07:54:57:   port: 3000
+2025-08-28T07:54:57: }
+2025-08-28T07:54:57:  ⨯ Failed to start server
+2025-08-28T07:54:57: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:57:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:57:     at new Promise (<anonymous>) {
+2025-08-28T07:54:57:   code: 'EADDRINUSE',
+2025-08-28T07:54:57:   errno: -98,
+2025-08-28T07:54:57:   syscall: 'listen',
+2025-08-28T07:54:57:   address: '::',
+2025-08-28T07:54:57:   port: 3000
+2025-08-28T07:54:57: }
+2025-08-28T07:54:58:  ⨯ Failed to start server
+2025-08-28T07:54:58: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:58:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:58:     at new Promise (<anonymous>) {
+2025-08-28T07:54:58:   code: 'EADDRINUSE',
+2025-08-28T07:54:58:   errno: -98,
+2025-08-28T07:54:58:   syscall: 'listen',
+2025-08-28T07:54:58:   address: '::',
+2025-08-28T07:54:58:   port: 3000
+2025-08-28T07:54:58: }
+2025-08-28T07:54:59:  ⨯ Failed to start server
+2025-08-28T07:54:59: Error: listen EADDRINUSE: address already in use :::3000
+2025-08-28T07:54:59:     at <unknown> (Error: listen EADDRINUSE: address already in use :::3000)
+2025-08-28T07:54:59:     at new Promise (<anonymous>) {
+2025-08-28T07:54:59:   code: 'EADDRINUSE',
+2025-08-28T07:54:59:   errno: -98,
+2025-08-28T07:54:59:   syscall: 'listen',
+2025-08-28T07:54:59:   address: '::',
+2025-08-28T07:54:59:   port: 3000
+2025-08-28T07:54:59: }
+2025-08-28T07:59:31:  ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2025-08-28T07:59:31: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T07:59:32:  ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2025-08-28T07:59:32: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T07:59:32:  ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2025-08-28T07:59:32: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T07:59:33:  ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2025-08-28T07:59:33: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T07:59:33:  ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2025-08-28T07:59:33: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T07:59:34:  ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2025-08-28T07:59:34: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T07:59:34:  ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2025-08-28T07:59:34: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T07:59:34:  ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2025-08-28T07:59:35: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T07:59:35:  ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2025-08-28T07:59:35: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T07:59:35:  ⚠ You are using a non-standard "NODE_ENV" value in your environment. This creates inconsistencies in the project and is strongly advised against. Read more: https://nextjs.org/docs/messages/non-standard-node-env
+2025-08-28T07:59:35: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T08:02:55: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T08:02:56: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T08:02:56: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T08:02:56: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T08:02:57: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T08:02:57: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T08:02:57: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T08:02:58: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T08:02:58: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run
+2025-08-28T08:02:58: Invalid project directory provided, no such directory: /opt/gdev/crm-mvp/run

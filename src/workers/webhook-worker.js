@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 
-const { PrismaClient } = require('@prisma/client')
+const { prisma } = require('../lib/prisma')
 const fetch = require('node-fetch')
 const crypto = require('crypto')
-
-const prisma = new PrismaClient()
 
 class WebhookWorker {
   constructor() {
@@ -31,13 +29,19 @@ class WebhookWorker {
 
   async processWebhookQueue() {
     try {
-      // Buscar webhooks pendentes na fila
-      const pendingWebhooks = await prisma.webhookQueue.findMany({
+      // Buscar webhook deliveries pendentes (não entregues)
+      const pendingDeliveries = await prisma.webhookDelivery.findMany({
         where: {
-          status: 'PENDING',
-          scheduledFor: {
-            lte: new Date()
+          success: false,
+          attempts: {
+            lt: 3 // Máximo 3 tentativas
+          },
+          createdAt: {
+            gte: new Date(Date.now() - 24 * 60 * 60 * 1000) // Últimas 24 horas
           }
+        },
+        include: {
+          webhook: true
         },
         take: 10, // Processar 10 por vez
         orderBy: {
@@ -45,15 +49,15 @@ class WebhookWorker {
         }
       })
 
-      if (pendingWebhooks.length === 0) {
+      if (pendingDeliveries.length === 0) {
         return
       }
 
-      console.log(`📝 Processando ${pendingWebhooks.length} webhooks pendentes...`)
+      console.log(`📝 Processando ${pendingDeliveries.length} webhook deliveries pendentes...`)
 
-      // Processar webhooks em paralelo
-      const promises = pendingWebhooks.map(webhookItem => 
-        this.processWebhookItem(webhookItem)
+      // Processar deliveries em paralelo
+      const promises = pendingDeliveries.map(delivery => 
+        this.processWebhookDelivery(delivery)
       )
 
       await Promise.allSettled(promises)
@@ -63,35 +67,17 @@ class WebhookWorker {
     }
   }
 
-  async processWebhookItem(webhookItem) {
+  async processWebhookDelivery(delivery) {
     const startTime = Date.now()
     let success = false
     let statusCode = 0
     let errorMessage = ''
 
     try {
-      // Marcar como processando
-      await prisma.webhookQueue.update({
-        where: { id: webhookItem.id },
-        data: { 
-          status: 'PROCESSING',
-          processedAt: new Date()
-        }
-      })
-
-      // Buscar configurações do webhook
-      const webhook = await prisma.webhook.findUnique({
-        where: { id: webhookItem.webhookId }
-      })
+      const webhook = delivery.webhook
 
       if (!webhook || !webhook.isActive) {
-        await prisma.webhookQueue.update({
-          where: { id: webhookItem.id },
-          data: { 
-            status: 'CANCELLED',
-            errorMessage: 'Webhook não encontrado ou inativo'
-          }
-        })
+        console.log(`⚠️ Webhook ${webhook?.id || 'unknown'} está inativo, pulando delivery ${delivery.id}`)
         return
       }
 
@@ -99,15 +85,15 @@ class WebhookWorker {
       const headers = {
         'Content-Type': 'application/json',
         'User-Agent': 'CRM-Webhook-Worker/1.0',
-        'X-Webhook-Event': webhookItem.event,
-        'X-Webhook-Timestamp': webhookItem.createdAt.toISOString(),
-        ...webhook.headers
+        'X-Webhook-Event': delivery.event,
+        'X-Webhook-Timestamp': delivery.createdAt.toISOString(),
+        'X-Webhook-Delivery-Id': delivery.id
       }
 
       // Adicionar assinatura HMAC se secret estiver configurado
       if (webhook.secret) {
         const signature = this.generateSignature(
-          JSON.stringify(webhookItem.payload), 
+          JSON.stringify(delivery.payload), 
           webhook.secret
         )
         headers['X-Webhook-Signature'] = signature
@@ -117,78 +103,60 @@ class WebhookWorker {
       const response = await fetch(webhook.url, {
         method: 'POST',
         headers,
-        body: JSON.stringify(webhookItem.payload),
+        body: JSON.stringify(delivery.payload),
         timeout: 30000 // 30 segundos
       })
 
       statusCode = response.status
       success = response.ok
+      const responseText = await response.text()
 
       if (!response.ok) {
         errorMessage = `HTTP ${response.status}: ${response.statusText}`
       }
 
-      // Atualizar status do item da fila
-      await prisma.webhookQueue.update({
-        where: { id: webhookItem.id },
+      // Atualizar delivery com resultado
+      await prisma.webhookDelivery.update({
+        where: { id: delivery.id },
         data: {
-          status: success ? 'COMPLETED' : 'FAILED',
+          success,
           statusCode,
-          errorMessage: errorMessage || null,
-          completedAt: new Date()
+          response: responseText,
+          attempts: { increment: 1 },
+          deliveredAt: success ? new Date() : null
         }
       })
 
+      console.log(`${success ? '✅' : '❌'} Webhook delivery ${delivery.id} - ${webhook.url} - ${statusCode}`)
+
     } catch (error) {
       errorMessage = error.message || 'Erro desconhecido'
-      console.error(`❌ Erro ao processar webhook ${webhookItem.id}:`, error)
+      console.error(`❌ Erro ao processar webhook delivery ${delivery.id}:`, error)
 
-      // Marcar como falhado
-      await prisma.webhookQueue.update({
-        where: { id: webhookItem.id },
+      // Atualizar delivery com erro
+      await prisma.webhookDelivery.update({
+        where: { id: delivery.id },
         data: {
-          status: 'FAILED',
-          errorMessage,
-          completedAt: new Date()
+          success: false,
+          response: errorMessage,
+          attempts: { increment: 1 }
         }
       })
     }
 
     const duration = Date.now() - startTime
 
-    // Atualizar estatísticas do webhook
-    const updateData = {
-      totalCalls: { increment: 1 },
-      lastTriggeredAt: new Date()
-    }
-
+    // Atualizar timestamp do webhook
     if (success) {
-      updateData.successfulCalls = { increment: 1 }
-    } else {
-      updateData.failedCalls = { increment: 1 }
+      await prisma.webhook.update({
+        where: { id: webhook.id },
+        data: {
+          lastTriggered: new Date()
+        }
+      })
     }
 
-    await prisma.webhook.update({
-      where: { id: webhookItem.webhookId },
-      data: updateData
-    })
-
-    // Criar log do webhook
-    await prisma.webhookLog.create({
-      data: {
-        webhookId: webhookItem.webhookId,
-        event: webhookItem.event,
-        url: webhookItem.webhook?.url || '',
-        payload: webhookItem.payload,
-        statusCode,
-        success,
-        errorMessage: errorMessage || null,
-        duration,
-        triggeredAt: new Date()
-      }
-    })
-
-    console.log(`${success ? '✅' : '❌'} Webhook ${webhookItem.id} processado: ${statusCode} (${duration}ms)`)
+    console.log(`⏱️ Webhook delivery ${delivery.id} processado em ${duration}ms`)
   }
 
   generateSignature(payload, secret) {
@@ -199,23 +167,21 @@ class WebhookWorker {
 
   async cleanup() {
     try {
-      // Limpar itens antigos da fila (mais de 7 dias)
-      const sevenDaysAgo = new Date()
-      sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
+      // Limpar deliveries antigas (mais de 30 dias)
+      const thirtyDaysAgo = new Date()
+      thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30)
 
-      const deleted = await prisma.webhookQueue.deleteMany({
+      const deleted = await prisma.webhookDelivery.deleteMany({
         where: {
           createdAt: {
-            lt: sevenDaysAgo
+            lt: thirtyDaysAgo
           },
-          status: {
-            in: ['COMPLETED', 'FAILED', 'CANCELLED']
-          }
+          success: true // Só remove deliveries bem-sucedidas
         }
       })
 
       if (deleted.count > 0) {
-        console.log(`🧹 Limpeza: ${deleted.count} itens removidos da fila`)
+        console.log(`🧹 Limpeza: ${deleted.count} webhook deliveries antigas removidas`)
       }
     } catch (error) {
       console.error('❌ Erro na limpeza da fila:', error)

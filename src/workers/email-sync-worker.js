@@ -1,16 +1,17 @@
 #!/usr/bin/env node
 
-const { PrismaClient } = require('@prisma/client')
+const { prisma } = require('../lib/prisma')
 const Imap = require('node-imap')
 const { simpleParser } = require('mailparser')
-
-const prisma = new PrismaClient()
 
 class EmailSyncWorker {
   constructor() {
     this.isRunning = false
     this.interval = null
-    this.syncInterval = 300000 // 5 minutos
+    this.syncInterval = process.env.EMAIL_SYNC_INTERVAL || 300000 // 5 minutos (configurável)
+    this.maxRetries = 3
+    this.retryDelay = 5000 // 5 segundos
+    this.connectionPool = new Map() // Pool de conexões IMAP
   }
 
   start() {
@@ -62,11 +63,18 @@ class EmailSyncWorker {
       console.log(`📬 Sincronizando ${emailAccounts.length} contas de email...`)
 
       // Sincronizar contas em paralelo (mas limitado para não sobrecarregar)
-      const batchSize = 3 // Máximo 3 contas simultâneas
+      const batchSize = process.env.EMAIL_SYNC_BATCH_SIZE || 3 // Máximo 3 contas simultâneas (configurável)
       for (let i = 0; i < emailAccounts.length; i += batchSize) {
         const batch = emailAccounts.slice(i, i + batchSize)
-        const promises = batch.map(account => this.syncAccount(account))
-        await Promise.allSettled(promises)
+        const promises = batch.map(account => this.syncAccountWithRetry(account))
+        const results = await Promise.allSettled(promises)
+        
+        // Log de resultados
+        results.forEach((result, index) => {
+          if (result.status === 'rejected') {
+            console.error(`❌ Falha na sincronização da conta ${batch[index].email}:`, result.reason)
+          }
+        })
       }
 
     } catch (error) {
@@ -74,18 +82,33 @@ class EmailSyncWorker {
     }
   }
 
+  async syncAccountWithRetry(emailAccount, retryCount = 0) {
+    try {
+      await this.syncAccount(emailAccount)
+    } catch (error) {
+      if (retryCount < this.maxRetries) {
+        console.log(`🔄 Tentativa ${retryCount + 1}/${this.maxRetries} para ${emailAccount.email}...`)
+        await new Promise(resolve => setTimeout(resolve, this.retryDelay * (retryCount + 1)))
+        return this.syncAccountWithRetry(emailAccount, retryCount + 1)
+      } else {
+        console.error(`❌ Falha definitiva na sincronização de ${emailAccount.email} após ${this.maxRetries} tentativas`)
+        throw error
+      }
+    }
+  }
+
   async syncAccount(emailAccount) {
     console.log(`📥 Sincronizando conta: ${emailAccount.email}`)
     
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
       const imapConfig = {
         user: emailAccount.username,
         password: emailAccount.password,
         host: emailAccount.imapHost,
         port: emailAccount.imapPort,
         tls: emailAccount.imapSecure,
-        connTimeout: 60000,
-        authTimeout: 30000,
+        connTimeout: 30000, // Reduzido para 30s
+        authTimeout: 15000, // Reduzido para 15s
         keepalive: false
       }
 
@@ -100,13 +123,15 @@ class EmailSyncWorker {
             return resolve()
           }
 
-          // Buscar emails dos últimos 7 dias que ainda não foram sincronizados
-          const sevenDaysAgo = new Date()
-          sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7)
+          // Buscar emails dos últimos dias (configurável)
+          const daysBack = process.env.EMAIL_SYNC_DAYS_BACK || 7
+          const syncDate = new Date()
+          syncDate.setDate(syncDate.getDate() - daysBack)
           
+          // Otimizar critérios de busca
           const searchCriteria = [
             'UNSEEN', // Apenas não lidos para otimizar
-            ['SINCE', sevenDaysAgo]
+            ['SINCE', syncDate]
           ]
 
           imap.search(searchCriteria, (err, results) => {
@@ -164,11 +189,21 @@ class EmailSyncWorker {
 
       imap.once('error', (err) => {
         console.error(`❌ Erro IMAP para ${emailAccount.email}:`, err.message)
-        resolve()
+        reject(new Error(`IMAP Error: ${err.message}`))
       })
 
       imap.once('end', () => {
         resolve()
+      })
+
+      // Timeout para conexão
+      const connectionTimeout = setTimeout(() => {
+        imap.end()
+        reject(new Error(`Timeout na conexão IMAP para ${emailAccount.email}`))
+      }, 45000) // 45 segundos
+
+      imap.once('ready', () => {
+        clearTimeout(connectionTimeout)
       })
 
       imap.connect()
@@ -177,37 +212,51 @@ class EmailSyncWorker {
 
   async saveEmail(emailAccount, parsed) {
     try {
-      // Verificar se email já existe
-      const existingEmail = await prisma.email.findUnique({
-        where: {
-          emailAccountId_messageId: {
-            emailAccountId: emailAccount.id,
-            messageId: parsed.messageId || `${parsed.subject}-${parsed.date?.getTime()}`
+      // Gerar messageId único
+      const messageId = parsed.messageId || `${parsed.subject}-${parsed.date?.getTime()}-${Math.random().toString(36).substr(2, 9)}`
+      
+      // Cache simples para evitar verificações desnecessárias
+      const cacheKey = `${emailAccount.id}-${messageId}`
+      if (this.processedEmails && this.processedEmails.has(cacheKey)) {
+        return // Email já processado nesta sessão
+      }
+      
+      // Verificar se email já existe (com timeout)
+      const existingEmail = await Promise.race([
+        prisma.email.findUnique({
+          where: {
+            messageId: messageId
           }
-        }
-      })
+        }),
+        new Promise((_, reject) => 
+          setTimeout(() => reject(new Error('Database timeout')), 10000)
+        )
+      ])
 
       if (existingEmail) {
+        // Adicionar ao cache
+        if (!this.processedEmails) this.processedEmails = new Set()
+        this.processedEmails.add(cacheKey)
         return // Email já existe
       }
 
-      // Preparar dados do email
+      // Preparar dados do email com validação
       const emailData = {
-        messageId: parsed.messageId || `${parsed.subject}-${parsed.date?.getTime()}`,
-        subject: parsed.subject || 'Sem assunto',
-        fromAddress: parsed.from?.value?.[0]?.address || '',
-        fromName: parsed.from?.value?.[0]?.name || null,
-        toAddresses: parsed.to?.value?.map(addr => addr.address) || [],
-        ccAddresses: parsed.cc?.value?.map(addr => addr.address) || [],
-        bccAddresses: parsed.bcc?.value?.map(addr => addr.address) || [],
-        bodyText: parsed.text || null,
-        bodyHtml: parsed.html || null,
+        messageId: messageId,
+        subject: (parsed.subject || 'Sem assunto').substring(0, 255), // Limitar tamanho
+        fromAddress: (parsed.from?.value?.[0]?.address || '').substring(0, 255),
+        fromName: parsed.from?.value?.[0]?.name?.substring(0, 255) || null,
+        toAddresses: (parsed.to?.value?.map(addr => addr.address) || []).slice(0, 50), // Limitar quantidade
+        ccAddresses: (parsed.cc?.value?.map(addr => addr.address) || []).slice(0, 50),
+        bccAddresses: (parsed.bcc?.value?.map(addr => addr.address) || []).slice(0, 50),
+        bodyText: parsed.text?.substring(0, 50000) || null, // Limitar tamanho do texto
+        bodyHtml: parsed.html?.substring(0, 100000) || null, // Limitar tamanho do HTML
         isRead: false,
         isStarred: false,
         hasAttachments: (parsed.attachments && parsed.attachments.length > 0),
         receivedAt: parsed.date || new Date(),
         emailAccountId: emailAccount.id,
-        folder: 'INBOX'
+        folderId: null // TODO: Implementar mapeamento de pastas
       }
 
       // Salvar email
@@ -215,20 +264,32 @@ class EmailSyncWorker {
         data: emailData
       })
 
-      // Salvar anexos se existirem
+      // Salvar anexos se existirem (limitado para performance)
       if (parsed.attachments && parsed.attachments.length > 0) {
-        const attachments = parsed.attachments.map(attachment => ({
-          emailId: savedEmail.id,
-          filename: attachment.filename || 'anexo',
-          contentType: attachment.contentType || 'application/octet-stream',
-          size: attachment.size || 0,
-          content: attachment.content || Buffer.alloc(0)
-        }))
+        const maxAttachments = 10 // Limitar número de anexos
+        const maxAttachmentSize = 10 * 1024 * 1024 // 10MB por anexo
+        
+        const attachments = parsed.attachments
+          .slice(0, maxAttachments)
+          .filter(attachment => (attachment.size || 0) <= maxAttachmentSize)
+          .map(attachment => ({
+            emailId: savedEmail.id,
+            filename: (attachment.filename || 'anexo').substring(0, 255),
+            contentType: (attachment.contentType || 'application/octet-stream').substring(0, 100),
+            size: attachment.size || 0,
+            content: attachment.content || Buffer.alloc(0)
+          }))
 
-        await prisma.emailAttachment.createMany({
-          data: attachments
-        })
+        if (attachments.length > 0) {
+          await prisma.emailAttachment.createMany({
+            data: attachments
+          })
+        }
       }
+      
+      // Adicionar ao cache de processados
+      if (!this.processedEmails) this.processedEmails = new Set()
+      this.processedEmails.add(cacheKey)
 
       console.log(`💾 Email salvo: ${parsed.subject} (${emailAccount.email})`)
 
@@ -248,21 +309,54 @@ class EmailSyncWorker {
 
   async cleanup() {
     try {
-      // Limpar emails antigos (mais de 90 dias) se necessário
-      const ninetyDaysAgo = new Date()
-      ninetyDaysAgo.setDate(ninetyDaysAgo.getDate() - 90)
+      console.log('🧹 Iniciando limpeza...')
+      
+      // Limpar cache de emails processados
+      if (this.processedEmails && this.processedEmails.size > 10000) {
+        console.log(`🗑️ Limpando cache de ${this.processedEmails.size} emails processados`)
+        this.processedEmails.clear()
+      }
+      
+      // Limpar pool de conexões
+      if (this.connectionPool && this.connectionPool.size > 0) {
+        console.log(`🔌 Limpando ${this.connectionPool.size} conexões do pool`)
+        this.connectionPool.clear()
+      }
+      
+      // Verificar emails antigos (configurável)
+      const retentionDays = process.env.EMAIL_RETENTION_DAYS || 90
+      const retentionDate = new Date()
+      retentionDate.setDate(retentionDate.getDate() - retentionDays)
 
-      // Por enquanto, apenas log - não excluir automaticamente
       const oldEmailsCount = await prisma.email.count({
         where: {
           receivedAt: {
-            lt: ninetyDaysAgo
+            lt: retentionDate
           }
         }
       })
 
       if (oldEmailsCount > 0) {
-        console.log(`📊 Existem ${oldEmailsCount} emails com mais de 90 dias`)
+        console.log(`📊 Existem ${oldEmailsCount} emails com mais de ${retentionDays} dias`)
+        
+        // Se configurado para auto-limpeza
+        if (process.env.EMAIL_AUTO_CLEANUP === 'true') {
+          console.log(`🗑️ Removendo emails antigos...`)
+          await prisma.email.deleteMany({
+            where: {
+              receivedAt: {
+                lt: retentionDate
+              }
+            }
+          })
+          console.log(`✅ ${oldEmailsCount} emails antigos removidos`)
+        }
+      }
+      
+      // Forçar garbage collection se disponível
+      if (global.gc) {
+        global.gc()
+        console.log('♻️ Garbage collection executado')
       }
 
     } catch (error) {

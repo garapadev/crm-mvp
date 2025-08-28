@@ -1,10 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { PrismaClient } from '@prisma/client'
-import { getServerSession } from 'next-auth'
-import { authConfig } from '@/lib/auth'
-
-const prisma = new PrismaClient()
+import { prisma } from '@/lib/prisma'
+import { auth } from '@/lib/auth'
 
 // Schema de validação para criação de conta de email
 const createEmailAccountSchema = z.object({
@@ -284,7 +281,7 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     // Obter sessão do usuário logado
-    const session = await getServerSession(authConfig)
+    const session = await auth()
     
     if (!session?.user?.employeeId) {
       return NextResponse.json(

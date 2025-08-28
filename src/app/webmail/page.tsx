@@ -38,7 +38,7 @@ interface EmailAccount {
   id: string
   name: string
   email: string
-  type: 'IMAP'
+  type: 'IMAP' | 'POP3' | 'EXCHANGE'
   isDefault: boolean
   isActive: boolean
   lastSyncAt?: string
@@ -92,7 +92,8 @@ interface Email {
 
 export default function WebmailPage() {
   const router = useRouter()
-  const [emailAccounts, setEmailAccounts] = useState<EmailAccount[]>([])
+  const [emailAccounts, setEmailAccounts] = useState<EmailAccount[]>([])  
+  const [accountsLoading, setAccountsLoading] = useState(false)
   const [emails, setEmails] = useState<Email[]>([])
   const [selectedAccount, setSelectedAccount] = useState<EmailAccount | null>(null)
   const [selectedEmail, setSelectedEmail] = useState<Email | null>(null)
@@ -100,10 +101,9 @@ export default function WebmailPage() {
   const [emailsLoading, setEmailsLoading] = useState(false)
   const [syncing, setSyncing] = useState(false)
   const [searchTerm, setSearchTerm] = useState("")
-  const [filterRead, setFilterRead] = useState<string>("")
-  const [filterStarred, setFilterStarred] = useState<string>("")
+  const [filterRead, setFilterRead] = useState<string>("all")
+  const [filterStarred, setFilterStarred] = useState<string>("all")
   const [showComposer, setShowComposer] = useState(false)
-  // Removido: const [isAccountDialogOpen, setIsAccountDialogOpen] = useState(false)
   const [currentView, setCurrentView] = useState<'inbox' | 'sent' | 'drafts' | 'trash'>('inbox')
 
   // Estatísticas de emails
@@ -115,6 +115,7 @@ export default function WebmailPage() {
   }
 
   const fetchEmailAccounts = async () => {
+    setAccountsLoading(true)
     try {
       const response = await fetch('/api/email-accounts?limit=50')
       if (response.ok) {
@@ -131,6 +132,7 @@ export default function WebmailPage() {
     } catch (error) {
       toast.error('Erro ao conectar com o servidor')
     } finally {
+      setAccountsLoading(false)
       setLoading(false)
     }
   }
@@ -149,29 +151,37 @@ export default function WebmailPage() {
       })
 
       if (searchTerm) params.append('search', searchTerm)
-      if (filterRead) params.append('isRead', filterRead)
-      if (filterStarred) params.append('isStarred', filterStarred)
+      if (filterRead && filterRead !== 'all') params.append('isRead', filterRead)
+      if (filterStarred && filterStarred !== 'all') params.append('isStarred', filterStarred)
 
+      console.log('Fetching emails with params:', params.toString())
       const response = await fetch(`/api/emails?${params}`)
+      console.log('Response status:', response.status)
+      
       if (response.ok) {
         const data = await response.json()
+        console.log('Emails received:', data.emails?.length || 0)
+        console.log('First email:', data.emails?.[0])
         setEmails(data.emails || [])
       } else {
+        console.error('Error response:', await response.text())
         toast.error('Erro ao carregar emails')
       }
     } catch (error) {
+      console.error('Fetch error:', error)
       toast.error('Erro ao conectar com o servidor')
     } finally {
       setEmailsLoading(false)
     }
   }
 
-  const handleSyncEmails = async () => {
-    if (!selectedAccount) return
+  const handleSyncEmails = async (accountId?: string) => {
+    const targetAccount = accountId ? emailAccounts.find(acc => acc.id === accountId) : selectedAccount
+    if (!targetAccount) return
 
     setSyncing(true)
     try {
-      const response = await fetch(`/api/email-accounts/${selectedAccount.id}/sync`, {
+      const response = await fetch(`/api/email-accounts/${targetAccount.id}/sync`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -282,20 +292,54 @@ export default function WebmailPage() {
     }
   }, [selectedAccount, searchTerm, filterRead, filterStarred])
 
-  // Filtrar emails com base na view atual
+  // Filtrar emails com base na view atual e filtros
   const filteredEmails = emails.filter(email => {
+    // Filtro por view
+    let viewMatch = false;
     switch (currentView) {
       case 'inbox':
-        return true // Todos os emails (por enquanto)
+        viewMatch = true // Todos os emails (por enquanto)
+        break;
       case 'sent':
-        return email.fromAddress === selectedAccount?.email
+        viewMatch = email.fromAddress === selectedAccount?.email
+        break;
       case 'drafts':
-        return false // TODO: Implementar rascunhos
+        viewMatch = false // TODO: Implementar rascunhos
+        break;
       case 'trash':
-        return false // TODO: Implementar lixeira
+        viewMatch = false // TODO: Implementar lixeira
+        break;
       default:
-        return true
+        viewMatch = true
     }
+    
+    if (!viewMatch) return false;
+    
+    // Filtro por termo de busca
+    if (searchTerm) {
+      const searchLower = searchTerm.toLowerCase();
+      const matchesSearch = 
+        email.subject.toLowerCase().includes(searchLower) ||
+        email.fromAddress.toLowerCase().includes(searchLower) ||
+        (email.fromName && email.fromName.toLowerCase().includes(searchLower)) ||
+        (email.bodyText && email.bodyText.toLowerCase().includes(searchLower));
+      
+      if (!matchesSearch) return false;
+    }
+    
+    // Filtro por status de leitura
+    if (filterRead !== "all") {
+      const isRead = filterRead === "true";
+      if (email.isRead !== isRead) return false;
+    }
+    
+    // Filtro por favoritos
+    if (filterStarred !== "all") {
+      const isStarred = filterStarred === "true";
+      if (email.isStarred !== isStarred) return false;
+    }
+    
+    return true;
   })
 
   return (
@@ -311,7 +355,7 @@ export default function WebmailPage() {
           <div className="flex items-center space-x-2">
             <Button 
               variant="outline" 
-              onClick={handleSyncEmails}
+              onClick={() => handleSyncEmails()}
               disabled={!selectedAccount || syncing}
             >
               <RefreshCw className={`h-4 w-4 mr-2 ${syncing ? 'animate-spin' : ''}`} />
@@ -323,7 +367,16 @@ export default function WebmailPage() {
               Novo Email
             </Button>
             
-            <Button variant="outline" onClick={() => router.push('/webmail/configurar')}>
+            <Button variant="outline" onClick={() => {
+              if (emailAccounts.length > 0) {
+                // Se existem contas, vai para edição da conta padrão ou primeira conta
+                const accountToEdit = emailAccounts.find(acc => acc.isDefault) || emailAccounts[0]
+                router.push(`/webmail/editar/${accountToEdit.id}`)
+              } else {
+                // Se não existem contas, vai para criação
+                router.push('/webmail/configurar')
+              }
+            }}>
               <Settings className="h-4 w-4 mr-2" />
               Configurar Conta
             </Button>
@@ -362,8 +415,11 @@ export default function WebmailPage() {
               {/* Contas de Email */}
               <EmailAccountsList
                 accounts={emailAccounts}
+                loading={accountsLoading}
                 selectedAccount={selectedAccount}
                 onAccountSelect={setSelectedAccount}
+                onEditAccount={(account) => router.push(`/webmail/editar/${account.id}`)}
+                onSyncAccount={(account) => handleSyncEmails(account.id)}
               />
 
               {/* Navegação */}
@@ -453,7 +509,7 @@ export default function WebmailPage() {
                       <SelectValue placeholder="Status" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">Todos</SelectItem>
+                      <SelectItem value="all">Todos</SelectItem>
                       <SelectItem value="false">Não lidos</SelectItem>
                       <SelectItem value="true">Lidos</SelectItem>
                     </SelectContent>
@@ -464,7 +520,7 @@ export default function WebmailPage() {
                       <SelectValue placeholder="Favoritos" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="">Todos</SelectItem>
+                      <SelectItem value="all">Todos</SelectItem>
                       <SelectItem value="true">Favoritos</SelectItem>
                       <SelectItem value="false">Não favoritos</SelectItem>
                     </SelectContent>

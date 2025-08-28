@@ -478,3 +478,483 @@
 2025-08-25T15:18:39:   code: 'MODULE_NOT_FOUND',
 2025-08-25T15:18:39:   requireStack: [ 'c:\\projetos\\mvp28\\src\\workers\\webhook-worker.js' ]
 2025-08-25T15:18:39: }
+2025-08-28T07:54:19: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:19: Require stack:
+2025-08-28T07:54:19: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:19:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:19:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:19:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:19:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:19:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:19:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:19:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:19:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:19:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:19:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:19:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:19:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:19: }
+2025-08-28T07:54:19: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:19: Require stack:
+2025-08-28T07:54:19: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:19:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:19:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:19:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:19:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:19:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:19:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:19:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:19:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:19:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:19:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:19:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:19:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:19: }
+2025-08-28T07:54:19: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:19: Require stack:
+2025-08-28T07:54:19: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:19:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:19:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:19:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:19:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:19:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:19:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:19:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:19:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:19:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:19:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:19:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:19:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:19: }
+2025-08-28T07:54:19: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:19: Require stack:
+2025-08-28T07:54:19: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:19:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:19:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:19:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:19:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:19:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:19:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:19:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:19:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:19:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:19:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:19:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:19:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:19: }
+2025-08-28T07:54:20: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:20: Require stack:
+2025-08-28T07:54:20: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:20:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:20:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:20:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:20:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:20:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:20:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:20:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:20:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:20:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:20:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:20:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:20:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:20: }
+2025-08-28T07:54:20: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:20: Require stack:
+2025-08-28T07:54:20: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:20:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:20:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:20:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:20:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:20:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:20:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:20:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:20:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:20:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:20:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:20:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:20:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:20: }
+2025-08-28T07:54:20: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:20: Require stack:
+2025-08-28T07:54:20: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:20:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:20:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:20:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:20:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:20:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:20:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:20:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:20:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:20:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:20:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:20:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:20:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:20: }
+2025-08-28T07:54:20: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:20: Require stack:
+2025-08-28T07:54:20: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:20:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:20:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:20:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:20:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:20:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:20:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:20:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:20:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:20:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:20:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:20:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:20:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:20: }
+2025-08-28T07:54:20: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:20: Require stack:
+2025-08-28T07:54:20: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:20:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:20:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:20:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:20:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:20:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:20:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:20:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:20:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:20:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:20:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:20:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:20:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:20: }
+2025-08-28T07:54:21: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:21: Require stack:
+2025-08-28T07:54:21: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:21:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:21:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:21:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:21:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:21:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:21:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:21:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:21:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:21:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:21:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:21:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:21:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:21: }
+2025-08-28T07:54:53: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:53: Require stack:
+2025-08-28T07:54:53: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:53:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:53:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:53:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:53:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:53:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:53:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:53:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:53:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:53:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:53:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:53:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:53:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:53: }
+2025-08-28T07:54:53: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:53: Require stack:
+2025-08-28T07:54:53: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:53:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:53:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:53:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:53:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:53:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:53:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:53:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:53:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:53:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:53:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:53:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:53:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:53: }
+2025-08-28T07:54:53: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:53: Require stack:
+2025-08-28T07:54:53: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:53:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:53:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:53:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:53:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:53:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:53:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:53:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:53:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:53:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:53:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:53:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:53:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:53: }
+2025-08-28T07:54:53: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:53: Require stack:
+2025-08-28T07:54:53: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:53:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:53:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:53:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:53:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:53:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:53:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:53:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:53:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:53:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:53:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:53:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:53:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:53: }
+2025-08-28T07:54:54: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:54: Require stack:
+2025-08-28T07:54:54: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:54:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:54:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:54:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:54:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:54:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:54:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:54:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:54:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:54:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:54:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:54:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:54:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:54: }
+2025-08-28T07:54:54: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:54: Require stack:
+2025-08-28T07:54:54: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:54:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:54:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:54:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:54:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:54:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:54:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:54:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:54:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:54:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:54:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:54:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:54:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:54: }
+2025-08-28T07:54:54: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:54: Require stack:
+2025-08-28T07:54:54: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:54:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:54:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:54:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:54:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:54:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:54:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:54:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:54:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:54:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:54:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:54:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:54:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:54: }
+2025-08-28T07:54:54: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:54: Require stack:
+2025-08-28T07:54:54: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:54:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:54:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:54:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:54:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:54:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:54:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:54:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:54:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:54:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:54:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:54:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:54:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:54: }
+2025-08-28T07:54:54: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:54: Require stack:
+2025-08-28T07:54:54: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:54:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:54:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:54:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:54:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:54:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:54:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:54:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:54:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:54:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:54:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:54:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:54:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:54: }
+2025-08-28T07:54:55: Error: Cannot find module 'node-fetch'
+2025-08-28T07:54:55: Require stack:
+2025-08-28T07:54:55: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:54:55:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:54:55:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:54:55:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:54:55:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:54:55:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:54:55:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:54:55:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:54:55:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:54:55:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:54:55:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:54:55:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:54:55:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:54:55: }
+2025-08-28T07:59:31: Error: Cannot find module 'node-fetch'
+2025-08-28T07:59:31: Require stack:
+2025-08-28T07:59:31: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:59:31:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:59:31:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:59:31:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:59:31:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:59:31:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:59:31:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:59:31:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:59:31:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:59:31:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:59:31:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:59:31:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:59:31:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:59:31: }
+2025-08-28T07:59:31: Error: Cannot find module 'node-fetch'
+2025-08-28T07:59:31: Require stack:
+2025-08-28T07:59:31: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:59:31:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:59:31:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:59:31:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:59:31:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:59:31:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:59:31:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:59:31:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:59:31:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:59:31:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:59:31:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:59:31:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:59:31:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:59:31: }
+2025-08-28T07:59:32: Error: Cannot find module 'node-fetch'
+2025-08-28T07:59:32: Require stack:
+2025-08-28T07:59:32: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:59:32:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:59:32:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:59:32:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:59:32:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:59:32:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:59:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:59:32:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:59:32:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:59:32:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:59:32:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:59:32:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:59:32:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:59:32: }
+2025-08-28T07:59:32: Error: Cannot find module 'node-fetch'
+2025-08-28T07:59:32: Require stack:
+2025-08-28T07:59:32: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:59:32:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:59:32:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:59:32:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:59:32:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:59:32:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:59:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:59:32:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:59:32:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:59:32:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:59:32:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:59:32:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:59:32:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:59:32: }
+2025-08-28T07:59:32: Error: Cannot find module 'node-fetch'
+2025-08-28T07:59:32: Require stack:
+2025-08-28T07:59:32: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:59:32:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:59:32:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:59:32:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:59:32:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:59:32:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:59:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:59:32:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:59:32:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:59:32:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:59:32:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:59:32:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:59:32:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:59:32: }
+2025-08-28T07:59:32: Error: Cannot find module 'node-fetch'
+2025-08-28T07:59:32: Require stack:
+2025-08-28T07:59:32: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:59:32:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:59:32:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:59:32:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:59:32:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:59:32:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:59:32:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:59:32:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:59:32:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:59:32:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:59:32:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:59:32:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:59:32:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:59:32: }
+2025-08-28T07:59:33: Error: Cannot find module 'node-fetch'
+2025-08-28T07:59:33: Require stack:
+2025-08-28T07:59:33: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:59:33:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:59:33:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:59:33:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:59:33:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:59:33:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:59:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:59:33:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:59:33:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:59:33:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:59:33:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:59:33:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:59:33:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:59:33: }
+2025-08-28T07:59:33: Error: Cannot find module 'node-fetch'
+2025-08-28T07:59:33: Require stack:
+2025-08-28T07:59:33: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:59:33:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:59:33:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:59:33:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:59:33:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:59:33:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:59:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:59:33:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:59:33:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:59:33:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:59:33:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:59:33:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:59:33:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:59:33: }
+2025-08-28T07:59:33: Error: Cannot find module 'node-fetch'
+2025-08-28T07:59:33: Require stack:
+2025-08-28T07:59:33: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:59:33:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:59:33:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:59:33:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:59:33:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:59:33:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:59:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:59:33:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:59:33:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:59:33:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:59:33:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:59:33:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:59:33:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:59:33: }
+2025-08-28T07:59:33: Error: Cannot find module 'node-fetch'
+2025-08-28T07:59:33: Require stack:
+2025-08-28T07:59:33: - /opt/gdev/crm-mvp/src/workers/webhook-worker.js
+2025-08-28T07:59:33:     at Module._resolveFilename (node:internal/modules/cjs/loader:1212:15)
+2025-08-28T07:59:33:     at Hook._require.Module.require (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/node_modules/require-in-the-middle/index.js:81:25)
+2025-08-28T07:59:33:     at require (node:internal/modules/helpers:182:18)
+2025-08-28T07:59:33:     at Object.<anonymous> (/opt/gdev/crm-mvp/src/workers/webhook-worker.js:4:15)
+2025-08-28T07:59:33:     at Module._compile (node:internal/modules/cjs/loader:1529:14)
+2025-08-28T07:59:33:     at Module._extensions..js (node:internal/modules/cjs/loader:1613:10)
+2025-08-28T07:59:33:     at Module.load (node:internal/modules/cjs/loader:1275:32)
+2025-08-28T07:59:33:     at Module._load (node:internal/modules/cjs/loader:1096:12)
+2025-08-28T07:59:33:     at Object.<anonymous> (/home/ronaldo/.nvm/versions/node/v20.19.4/lib/node_modules/pm2/lib/ProcessContainerFork.js:33:23)
+2025-08-28T07:59:33:     at Module._compile (node:internal/modules/cjs/loader:1529:14) {
+2025-08-28T07:59:33:   code: 'MODULE_NOT_FOUND',
+2025-08-28T07:59:33:   requireStack: [ '/opt/gdev/crm-mvp/src/workers/webhook-worker.js' ]
+2025-08-28T07:59:33: }

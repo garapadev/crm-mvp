@@ -1,0 +1,275 @@
+📧 Email Sync Worker iniciado
+🧹 Iniciando limpeza...
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+♻️ Garbage collection executado
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 824] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 825] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 826] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 827] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 829] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 828] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 832] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 830] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 831] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 833] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 834] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 835] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 836] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 837] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 839] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 840] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 838] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 841] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 842] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 843] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 844] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 845] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 846] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 847] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 848] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 849] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 850] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 851] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 852] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 853] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 854] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 855] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 856] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 857] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 862] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 863] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 864] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 865] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 866] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 867] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 868] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 869] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 870] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 871] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+✅ Processados 57 emails para naoresponda@alltomatos.com.br
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 892] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 893] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 894] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 895] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 896] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 897] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 899] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+💾 Email salvo: Novo ticket de suporte aberto [Ticket ID: 898] (naoresponda@alltomatos.com.br)
+❌ Erro ao disparar webhook: Cannot find module '../lib/webhook-service'
+Require stack:
+- /opt/gdev/crm-mvp/src/workers/email-sync-worker.js
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 67 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 68 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 70 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 69 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 71 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 69 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 69 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 68 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 69 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 65 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 70 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 69 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 68 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 71 emails para naoresponda@alltomatos.com.br
+📬 Sincronizando 1 contas de email...
+📥 Sincronizando conta: naoresponda@alltomatos.com.br
+📮 Encontrados 72 emails novos para naoresponda@alltomatos.com.br
+✅ Processados 67 emails para naoresponda@alltomatos.com.br

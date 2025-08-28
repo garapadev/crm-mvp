@@ -137,7 +137,7 @@ export function EmailList({
             key={email.id}
             className={`p-4 cursor-pointer hover:bg-gray-50 transition-colors ${
               selectedEmail?.id === email.id ? 'bg-blue-50 border-r-2 border-r-blue-500' : ''
-            } ${!email.isRead ? 'bg-blue-25' : ''}`}
+            } ${!email.isRead ? 'bg-blue-50' : ''}`}
             onClick={() => handleReadToggle(email)}
           >
             <div className="flex items-start space-x-3">

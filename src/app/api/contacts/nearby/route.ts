@@ -152,7 +152,7 @@ export async function GET(request: NextRequest) {
           distance: Math.round(distance)
         }
       })
-      .filter(contact => contact !== null && contact.distance <= validatedParams.radius)
+      .filter((contact): contact is NonNullable<typeof contact> => contact !== null && contact.distance <= validatedParams.radius)
       .sort((a, b) => a.distance - b.distance)
       .slice(0, limit)
 
@@ -168,7 +168,7 @@ export async function GET(request: NextRequest) {
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(
-        { error: 'Parâmetros inválidos', details: error.errors },
+        { error: 'Parâmetros inválidos', details: error.issues },
         { status: 400 }
       )
     }

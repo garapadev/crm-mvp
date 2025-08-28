@@ -22,7 +22,7 @@ import {
 import toast from "react-hot-toast"
 import { TaskTableView } from "@/components/tasks/task-table-view"
 import { TaskKanbanView } from "@/components/tasks/task-kanban-view"
-import { TaskFormDialog } from "@/components/tasks/task-form-dialog"
+import { useRouter } from "next/navigation"
 
 interface Task {
   id: string
@@ -86,11 +86,11 @@ const PRIORITY_COLORS = {
 }
 
 export default function TasksPage() {
+  const router = useRouter()
   const [tasks, setTasks] = useState<Task[]>([])
   const [employees, setEmployees] = useState<Employee[]>([])
   const [loading, setLoading] = useState(true)
   const [activeView, setActiveView] = useState<'table' | 'kanban'>('table')
-  const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false)
   const [searchTerm, setSearchTerm] = useState("")
   const [filterStatus, setFilterStatus] = useState<string>("")
   const [filterPriority, setFilterPriority] = useState<string>("")
@@ -134,27 +134,12 @@ export default function TasksPage() {
     fetchData()
   }, [])
 
-  const handleTaskCreate = async (taskData: any) => {
-    try {
-      const response = await fetch('/api/tasks', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(taskData),
-      })
+  const handleTaskCreate = () => {
+    router.push('/tasks/new')
+  }
 
-      if (response.ok) {
-        toast.success('Tarefa criada com sucesso!')
-        setIsCreateDialogOpen(false)
-        fetchData()
-      } else {
-        const error = await response.json()
-        toast.error(error.error || 'Erro ao criar tarefa')
-      }
-    } catch (error) {
-      toast.error('Erro ao conectar com o servidor')
-    }
+  const handleTaskEdit = (taskId: string) => {
+    router.push(`/tasks/${taskId}/edit`)
   }
 
   const handleTaskUpdate = async (id: string, updates: any) => {
@@ -245,7 +230,7 @@ export default function TasksPage() {
             <p className="text-gray-600">Gerencie tarefas e acompanhe o progresso</p>
           </div>
           
-          <Button onClick={() => setIsCreateDialogOpen(true)}>
+          <Button onClick={handleTaskCreate}>
             <Plus className="h-4 w-4 mr-2" />
             Nova Tarefa
           </Button>
@@ -409,14 +394,7 @@ export default function TasksPage() {
         </Card>
       </div>
 
-      {/* Dialog de Criação */}
-      <TaskFormDialog
-        open={isCreateDialogOpen}
-        onOpenChange={setIsCreateDialogOpen}
-        onSubmit={handleTaskCreate}
-        employees={employees}
-        priorityLabels={PRIORITY_LABELS}
-      />
+
     </AppLayout>
   )
 }

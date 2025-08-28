@@ -5,13 +5,9 @@ import { AppLayout } from "@/components/layout/app-layout"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { Checkbox } from "@/components/ui/checkbox"
 import { 
   Users, 
   Plus, 
@@ -26,10 +22,8 @@ import {
   MapPin,
   Calendar
 } from "lucide-react"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-import { z } from "zod"
 import toast from "react-hot-toast"
+import { useRouter } from "next/navigation"
 
 interface Employee {
   id: string
@@ -70,57 +64,17 @@ interface PermissionGroup {
   name: string
 }
 
-const employeeSchema = z.object({
-  firstName: z.string().min(1, "Nome é obrigatório"),
-  lastName: z.string().min(1, "Sobrenome é obrigatório"),
-  email: z.string().email("Email inválido"),
-  phone: z.string().optional(),
-  position: z.string().optional(),
-  department: z.string().optional(),
-  salary: z.number().optional(),
-  hireDate: z.string().optional(),
-  birthDate: z.string().optional(),
-  address: z.string().optional(),
-  city: z.string().optional(),
-  state: z.string().optional(),
-  zipCode: z.string().optional(),
-  country: z.string().optional(),
-  emergencyContact: z.string().optional(),
-  emergencyPhone: z.string().optional(),
-  notes: z.string().optional(),
-  groupId: z.string().optional(),
-  permissionGroupId: z.string().optional(),
-  createUser: z.boolean().optional(),
-  userPassword: z.string().optional(),
-})
 
-type EmployeeFormData = z.infer<typeof employeeSchema>
 
 export default function EmployeesPage() {
   const [employees, setEmployees] = useState<Employee[]>([])
   const [groups, setGroups] = useState<Group[]>([])
   const [permissionGroups, setPermissionGroups] = useState<PermissionGroup[]>([])
   const [loading, setLoading] = useState(true)
-  const [isCreateDialogOpen, setIsCreateDialogOpen] = useState(false)
-  const [isEditDialogOpen, setIsEditDialogOpen] = useState(false)
-  const [editingEmployee, setEditingEmployee] = useState<Employee | null>(null)
   const [searchTerm, setSearchTerm] = useState("")
   const [filterGroup, setFilterGroup] = useState<string>("")
   const [filterStatus, setFilterStatus] = useState<string>("")
-  const [createUser, setCreateUser] = useState(false)
-
-  const {
-    register,
-    handleSubmit,
-    reset,
-    setValue,
-    watch,
-    formState: { errors, isSubmitting }
-  } = useForm<EmployeeFormData>({
-    resolver: zodResolver(employeeSchema)
-  })
-
-  const watchCreateUser = watch("createUser", false)
+  const router = useRouter()
 
   const fetchData = async () => {
     try {
@@ -153,49 +107,16 @@ export default function EmployeesPage() {
     fetchData()
   }, [])
 
-  const onSubmit = async (data: EmployeeFormData) => {
-    try {
-      const url = editingEmployee ? `/api/employees/${editingEmployee.id}` : '/api/employees'
-      const method = editingEmployee ? 'PUT' : 'POST'
-      
-      const response = await fetch(url, {
-        method,
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      })
-
-      if (response.ok) {
-        toast.success(editingEmployee ? 'Colaborador atualizado com sucesso!' : 'Colaborador criado com sucesso!')
-        setIsCreateDialogOpen(false)
-        setIsEditDialogOpen(false)
-        setEditingEmployee(null)
-        setCreateUser(false)
-        reset()
-        fetchData()
-      } else {
-        const error = await response.json()
-        toast.error(error.error || 'Erro ao salvar colaborador')
-      }
-    } catch (error) {
-      toast.error('Erro ao conectar com o servidor')
-    }
+  const handleCreate = () => {
+    router.push('/employees/new')
   }
 
   const handleEdit = (employee: Employee) => {
-    setEditingEmployee(employee)
-    setValue('firstName', employee.firstName)
-    setValue('lastName', employee.lastName)
-    setValue('email', employee.email)
-    setValue('phone', employee.phone || '')
-    setValue('position', employee.position || '')
-    setValue('department', employee.department || '')
-    setValue('salary', employee.salary || undefined)
-    setValue('hireDate', employee.hireDate ? employee.hireDate.split('T')[0] : '')
-    setValue('groupId', employee.group?.id || '')
-    setValue('permissionGroupId', employee.permissionGroup?.id || '')
-    setIsEditDialogOpen(true)
+    router.push(`/employees/${employee.id}/edit`)
+  }
+
+  const handleView = (employee: Employee) => {
+    router.push(`/employees/${employee.id}`)
   }
 
   const handleDelete = async (employee: Employee) => {
@@ -246,182 +167,11 @@ export default function EmployeesPage() {
             <p className="text-gray-600">Gerencie os colaboradores da empresa</p>
           </div>
           
-          <Dialog open={isCreateDialogOpen} onOpenChange={setIsCreateDialogOpen}>
-            <DialogTrigger asChild>
-              <Button>
-                <Plus className="h-4 w-4 mr-2" />
-                Novo Colaborador
-              </Button>
-            </DialogTrigger>
-            <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
-              <DialogHeader>
-                <DialogTitle>Criar Novo Colaborador</DialogTitle>
-                <DialogDescription>
-                  Adicione um novo colaborador ao sistema
-                </DialogDescription>
-              </DialogHeader>
-              
-              <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="firstName">Nome *</Label>
-                    <Input
-                      {...register('firstName')}
-                      placeholder="Nome do colaborador"
-                    />
-                    {errors.firstName && (
-                      <p className="text-sm text-red-600 mt-1">{errors.firstName.message}</p>
-                    )}
-                  </div>
+          <Button onClick={handleCreate}>
+            <Plus className="h-4 w-4 mr-2" />
+            Novo Colaborador
+          </Button>
 
-                  <div>
-                    <Label htmlFor="lastName">Sobrenome *</Label>
-                    <Input
-                      {...register('lastName')}
-                      placeholder="Sobrenome do colaborador"
-                    />
-                    {errors.lastName && (
-                      <p className="text-sm text-red-600 mt-1">{errors.lastName.message}</p>
-                    )}
-                  </div>
-                </div>
-
-                <div>
-                  <Label htmlFor="email">Email *</Label>
-                  <Input
-                    {...register('email')}
-                    type="email"
-                    placeholder="email@empresa.com"
-                  />
-                  {errors.email && (
-                    <p className="text-sm text-red-600 mt-1">{errors.email.message}</p>
-                  )}
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="phone">Telefone</Label>
-                    <Input
-                      {...register('phone')}
-                      placeholder="(11) 99999-9999"
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="position">Cargo</Label>
-                    <Input
-                      {...register('position')}
-                      placeholder="Desenvolvedor, Gerente, etc."
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="department">Departamento</Label>
-                    <Input
-                      {...register('department')}
-                      placeholder="TI, RH, Vendas, etc."
-                    />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="hireDate">Data de Contratação</Label>
-                    <Input
-                      {...register('hireDate')}
-                      type="date"
-                    />
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 gap-4">
-                  <div>
-                    <Label htmlFor="groupId">Grupo</Label>
-                    <Select onValueChange={(value) => setValue('groupId', value === '__none__' ? '' : value)}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Selecione um grupo" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="__none__">Nenhum</SelectItem>
-                        {groups.map(group => (
-                          <SelectItem key={group.id} value={group.id}>
-                            {'  '.repeat(group.level)}{group.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="permissionGroupId">Grupo de Permissão</Label>
-                    <Select onValueChange={(value) => setValue('permissionGroupId', value === '__none__' ? '' : value)}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Selecione um grupo de permissão" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="__none__">Nenhum</SelectItem>
-                        {permissionGroups.map(group => (
-                          <SelectItem key={group.id} value={group.id}>
-                            {group.name}
-                          </SelectItem>
-                        ))}
-                      </SelectContent>
-                    </Select>
-                  </div>
-                </div>
-
-                <div className="space-y-2">
-                  <div className="flex items-center space-x-2">
-                    <Checkbox
-                      id="createUser"
-                      {...register('createUser')}
-                      onCheckedChange={(checked) => {
-                        setValue('createUser', checked as boolean)
-                        setCreateUser(checked as boolean)
-                      }}
-                    />
-                    <Label htmlFor="createUser">Criar usuário de acesso ao sistema</Label>
-                  </div>
-
-                  {watchCreateUser && (
-                    <div>
-                      <Label htmlFor="userPassword">Senha do usuário *</Label>
-                      <Input
-                        {...register('userPassword')}
-                        type="password"
-                        placeholder="Digite uma senha para o usuário"
-                      />
-                    </div>
-                  )}
-                </div>
-
-                <div>
-                  <Label htmlFor="notes">Observações</Label>
-                  <Textarea
-                    {...register('notes')}
-                    placeholder="Observações sobre o colaborador"
-                  />
-                </div>
-
-                <div className="flex justify-end space-x-2">
-                  <Button 
-                    type="button" 
-                    variant="outline"
-                    onClick={() => {
-                      setIsCreateDialogOpen(false)
-                      setCreateUser(false)
-                      reset()
-                    }}
-                  >
-                    Cancelar
-                  </Button>
-                  <Button type="submit" disabled={isSubmitting}>
-                    {isSubmitting ? 'Criando...' : 'Criar Colaborador'}
-                  </Button>
-                </div>
-              </form>
-            </DialogContent>
-          </Dialog>
         </div>
 
         {/* Filtros */}
@@ -487,7 +237,7 @@ export default function EmployeesPage() {
                 }
               </p>
               {employees.length === 0 && (
-                <Button onClick={() => setIsCreateDialogOpen(true)}>
+                <Button onClick={handleCreate}>
                   <Plus className="h-4 w-4 mr-2" />
                   Adicionar Primeiro Colaborador
                 </Button>

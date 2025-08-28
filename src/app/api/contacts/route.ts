@@ -21,7 +21,7 @@ const createContactSchema = z.object({
   source: z.string().optional(),
   latitude: z.number().optional(),
   longitude: z.number().optional(),
-  customFields: z.record(z.any()).optional(),
+  customFields: z.record(z.string(), z.any()).optional(),
 })
 
 /**
@@ -289,7 +289,7 @@ export async function POST(request: NextRequest) {
   } catch (error) {
     if (error instanceof z.ZodError) {
       return NextResponse.json(
-        { error: 'Dados inválidos', details: error.errors },
+        { error: 'Dados inválidos', details: error.issues },
         { status: 400 }
       )
     }

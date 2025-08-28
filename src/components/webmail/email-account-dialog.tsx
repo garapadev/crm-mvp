@@ -130,7 +130,8 @@ export function EmailAccountDialog({
       imapSecure: true,
       smtpPort: 587,
       smtpSecure: true,
-      isDefault: false
+      isDefault: false,
+      employeeId: ''
     }
   })
 
@@ -154,6 +155,37 @@ export function EmailAccountDialog({
       fetchEmployees()
     }
   }, [open])
+
+  // Carregar dados da conta para edição
+  useEffect(() => {
+    if (mode === 'edit' && account && open) {
+      reset({
+        name: account.name || '',
+        email: account.email || '',
+        type: account.type || 'IMAP',
+        imapHost: account.imapHost || '',
+        imapPort: account.imapPort || 993,
+        imapSecure: account.imapSecure ?? true,
+        smtpHost: account.smtpHost || '',
+        smtpPort: account.smtpPort || 587,
+        smtpSecure: account.smtpSecure ?? true,
+        username: account.username || '',
+        password: '', // Não carregar senha por segurança
+        isDefault: account.isDefault || false,
+        employeeId: account.employee?.id || account.employeeId || ''
+      })
+    } else if (mode === 'create' && open) {
+      reset({
+        type: 'IMAP',
+        imapPort: 993,
+        imapSecure: true,
+        smtpPort: 587,
+        smtpSecure: true,
+        isDefault: false,
+        employeeId: ''
+      })
+    }
+  }, [mode, account, open, reset])
 
   // Auto-detectar provedor baseado no email
   useEffect(() => {
@@ -290,7 +322,7 @@ export function EmailAccountDialog({
 
               <div>
                 <Label htmlFor="employeeId">Colaborador *</Label>
-                <Select onValueChange={(value) => setValue('employeeId', value)}>
+                <Select value={watch('employeeId') || ''} onValueChange={(value) => setValue('employeeId', value)}>
                   <SelectTrigger>
                     <SelectValue placeholder="Selecione o colaborador responsável" />
                   </SelectTrigger>
@@ -319,7 +351,7 @@ export function EmailAccountDialog({
             <TabsContent value="advanced" className="space-y-4">
               <div>
                 <Label htmlFor="type">Tipo de Conta</Label>
-                <Select onValueChange={(value) => setValue('type', value as any)}>
+                <Select value={watch('type') || 'IMAP'} onValueChange={(value) => setValue('type', value as any)}>
                   <SelectTrigger>
                     <SelectValue placeholder="Selecione o tipo" />
                   </SelectTrigger>

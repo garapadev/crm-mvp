@@ -1,10 +1,32 @@
 "use client"
 
 import { useEffect, useRef } from 'react'
-import SwaggerUI from 'swagger-ui-react'
-import 'swagger-ui-react/swagger-ui.css'
+import 'swagger-ui-dist/swagger-ui.css'
+
+// Import do SwaggerUIBundle
+const SwaggerUIBundle = require('swagger-ui-dist').SwaggerUIBundle
 
 export default function ApiDocsPage() {
+  const swaggerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    if (!swaggerRef.current) return
+
+    SwaggerUIBundle({
+      domNode: swaggerRef.current,
+      url: '/api/swagger',
+      docExpansion: 'list',
+      defaultModelsExpandDepth: 2,
+      displayRequestDuration: true,
+      tryItOutEnabled: true,
+      requestInterceptor: (req: any) => {
+        // Adicionar headers padrão se necessário
+        req.headers['Content-Type'] = 'application/json'
+        return req
+      }
+    })
+  }, [])
+
   return (
     <div className="min-h-screen bg-white">
       <div className="container mx-auto p-4">
@@ -18,18 +40,7 @@ export default function ApiDocsPage() {
         </div>
         
         <div className="bg-white rounded-lg border shadow-sm">
-          <SwaggerUI 
-            url="/api/swagger"
-            docExpansion="list"
-            defaultModelsExpandDepth={2}
-            displayRequestDuration={true}
-            tryItOutEnabled={true}
-            requestInterceptor={(req) => {
-              // Adicionar headers padrão se necessário
-              req.headers['Content-Type'] = 'application/json'
-              return req
-            }}
-          />
+          <div ref={swaggerRef} className="swagger-ui-wrapper" />
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 import Imap from 'node-imap'
 import * as nodemailer from 'nodemailer'
 import { simpleParser } from 'mailparser'
-import { PrismaClient } from '@prisma/client'
+import { PrismaClient } from '../generated/prisma'
 
 const prisma = new PrismaClient()
 
